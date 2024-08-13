@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+    "wix.vscode-import-cost",
+    "esbenp.prettier-vscode",
+    "gruntfuggly.todo-tree",
+    "styled-components.vscode-styled-components",
+    "wayou.vscode-todo-highlight"
+  ]
+}

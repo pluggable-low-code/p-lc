@@ -1,0 +1,47 @@
+{
+  "name": "@p-lc/react-and-vue-suite",
+  "version": "0.0.1",
+  "private": true,
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build -w --emptyOutDir=false",
+    "test": "vitest run --passWithNoTests",
+    "test:w": "vitest"
+  },
+  "dependencies": {
+    "@p-lc/editor": "workspace:^",
+    "@p-lc/editor-classical-layout-plugins": "workspace:^",
+    "@p-lc/editor-monaco-plugins": "workspace:^",
+    "@p-lc/react-runtime": "workspace:^",
+    "@p-lc/react-shared": "workspace:^",
+    "@p-lc/runtime": "workspace:^",
+    "@p-lc/shared": "workspace:^",
+    "@p-lc/uidl": "workspace:^",
+    "@p-lc/uidl-utils": "workspace:^",
+    "@p-lc/vue-runtime": "workspace:^",
+    "lodash-uni": "^1.2.0",
+    "mobx": "^6.13.1",
+    "mobx-react-lite": "^4.0.7",
+    "react-error-boundary": "^4.0.13",
+    "react-use": "^17.5.1",
+    "styled-components": "^6.1.12",
+    "vue": "^3.4.35"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@vitejs/plugin-react": "^4.3.1",
+    "react": "^18.3.1",
+    "vite": "^5.4.0",
+    "vite-plugin-checker": "^0.7.2",
+    "vite-plugin-dts": "^4.0.1",
+    "vite-plugin-externalize-deps": "^0.8.0",
+    "vitest": "^2.0.5"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  }
+}

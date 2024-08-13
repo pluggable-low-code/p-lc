@@ -1,0 +1,3094 @@
+{
+  "pkgName": "@p-lc/lc-types-ui",
+  "pkgVersion": "0.0.1",
+  "name": {
+    "key": "name"
+  },
+  "components": [
+    {
+      "type": "StringAttr",
+      "name": {
+        "key": "stringAttrName"
+      },
+      "groupName": {
+        "key": "groupAttr"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "StringAttr_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "EnumAttr_6",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "EnumAttr"
+        },
+        {
+          "elementType": "AttrGroup_7",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrGroup"
+        },
+        {
+          "elementType": "BooleanAttr_8",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "BooleanAttr"
+        },
+        {
+          "elementType": "JsonAttr_9",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "JsonAttr"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "r0KwIRu4qSIhsm0vnF45up",
+            "name": "String 4",
+            "type": "StringAttr_3",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strPlaceholder"
+              },
+              "enableI18n": true
+            },
+            "logicPath": [
+              "props",
+              "placeholder"
+            ]
+          },
+          {
+            "id": "rAnzD9lQq6dUemaRGCivpS",
+            "name": "Boolean",
+            "type": "BooleanAttr_8",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strI18n"
+              }
+            },
+            "logicPath": [
+              "props",
+              "enableI18n"
+            ]
+          },
+          {
+            "id": "rm_g28eJqt$RIFlfz_6mpE",
+            "name": "Group",
+            "type": "AttrGroup_7",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strWrapper"
+              }
+            },
+            "children": [
+              {
+                "id": "rjZTwtP2V9gpjtLjxktPHm",
+                "name": "String 3",
+                "type": "StringAttr_3",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLabel"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "label"
+                ]
+              },
+              {
+                "id": "rbfn5K2UhGkAyAhlAD5KE3",
+                "name": "String",
+                "type": "StringAttr_3",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strTip"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "tip"
+                ]
+              },
+              {
+                "id": "rzKiHX0S7G6eL4j0kULT54",
+                "name": "Enum",
+                "type": "EnumAttr_6",
+                "props": {
+                  "options": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "object",
+                        "value": {
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "horizontal"
+                          },
+                          "label": {
+                            "type": "i18n",
+                            "key": "strHorizontal"
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "value": {
+                          "label": {
+                            "type": "i18n",
+                            "key": "strVertical"
+                          },
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "vertical"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLayout"
+                  }
+                },
+                "logicPath": [
+                  "props",
+                  "layout"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "riOJKB0IADXHLXZNlthYLg",
+            "name": "Group 2",
+            "type": "AttrGroup_7",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strCommon"
+              }
+            },
+            "children": [
+              {
+                "id": "r$8wqCKDXJwM9fISBSUoGH",
+                "name": "JSON",
+                "type": "JsonAttr_9",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLogicPath"
+                  }
+                },
+                "logicPath": [
+                  "logicPath"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "StringAttr"
+        ],
+        "exportPath": [
+          "StringAttr"
+        ]
+      },
+      "implements": {
+        "if": true
+      }
+    },
+    {
+      "type": "NumberAttr",
+      "name": {
+        "key": "numberAttrName"
+      },
+      "groupName": {
+        "key": "groupAttr"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "StringAttr_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "EnumAttr_6",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "EnumAttr"
+        },
+        {
+          "elementType": "AttrGroup_7",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrGroup"
+        },
+        {
+          "elementType": "JsonAttr_8",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "JsonAttr"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "r0KwIRu4qSIhsm0vnF45up",
+            "name": "String 4",
+            "type": "StringAttr_3",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strPlaceholder"
+              },
+              "enableI18n": true
+            },
+            "logicPath": [
+              "props",
+              "placeholder"
+            ]
+          },
+          {
+            "id": "rm_g28eJqt$RIFlfz_6mpE",
+            "name": "Group",
+            "type": "AttrGroup_7",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strWrapper"
+              }
+            },
+            "children": [
+              {
+                "id": "rjZTwtP2V9gpjtLjxktPHm",
+                "name": "String 3",
+                "type": "StringAttr_3",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLabel"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "label"
+                ]
+              },
+              {
+                "id": "rbfn5K2UhGkAyAhlAD5KE3",
+                "name": "String",
+                "type": "StringAttr_3",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strTip"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "tip"
+                ]
+              },
+              {
+                "id": "rzKiHX0S7G6eL4j0kULT54",
+                "name": "Enum",
+                "type": "EnumAttr_6",
+                "props": {
+                  "options": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "object",
+                        "value": {
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "horizontal"
+                          },
+                          "label": {
+                            "type": "i18n",
+                            "key": "strHorizontal"
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "value": {
+                          "label": {
+                            "type": "i18n",
+                            "key": "strVertical"
+                          },
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "vertical"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLayout"
+                  }
+                },
+                "logicPath": [
+                  "props",
+                  "layout"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rX6lbmrX446bopV3jwtAyO",
+            "name": "Group 2",
+            "type": "AttrGroup_7",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strCommon"
+              }
+            },
+            "children": [
+              {
+                "id": "rI8c028AbS1mKrH6M5$kuk",
+                "name": "JSON",
+                "type": "JsonAttr_8",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLogicPath"
+                  }
+                },
+                "logicPath": [
+                  "logicPath"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "NumberAttr"
+        ],
+        "exportPath": [
+          "NumberAttr"
+        ]
+      },
+      "implements": {
+        "if": true
+      }
+    },
+    {
+      "type": "BooleanAttr",
+      "name": {
+        "key": "booleanAttrName"
+      },
+      "groupName": {
+        "key": "groupAttr"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "StringAttr_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "EnumAttr_4",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "EnumAttr"
+        },
+        {
+          "elementType": "AttrGroup_5",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrGroup"
+        },
+        {
+          "elementType": "BooleanAttr_6",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "BooleanAttr"
+        },
+        {
+          "elementType": "JsonAttr_7",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "JsonAttr"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "rTgGnu$5C61k1UtmKVaK6A",
+            "name": "Boolean",
+            "type": "BooleanAttr_6",
+            "logicPath": [
+              "props",
+              "defaultValue"
+            ],
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strDefaultValue"
+              }
+            }
+          },
+          {
+            "id": "rjRGTQWErIvuCHXaFlxY3Y",
+            "name": "Group",
+            "type": "AttrGroup_5",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strWrapper"
+              }
+            },
+            "children": [
+              {
+                "id": "r45fy3IDLtZVSwtlxjxSqh",
+                "name": "String",
+                "type": "StringAttr_3",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLabel"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "label"
+                ]
+              },
+              {
+                "id": "rXOwV1RbQFgG8leb2qQvI6",
+                "name": "String",
+                "type": "StringAttr_3",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strTip"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "tip"
+                ]
+              },
+              {
+                "id": "ruiJh0Nj6p47vBDm6BSaJT",
+                "name": "Enum",
+                "type": "EnumAttr_4",
+                "props": {
+                  "options": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "object",
+                        "value": {
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "horizontal"
+                          },
+                          "label": {
+                            "type": "i18n",
+                            "key": "strHorizontal"
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "value": {
+                          "label": {
+                            "type": "i18n",
+                            "key": "strVertical"
+                          },
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "vertical"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLayout"
+                  }
+                },
+                "logicPath": [
+                  "props",
+                  "layout"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rxO$Ix1KbDLi9NMS2E8Csp",
+            "name": "Group 2",
+            "type": "AttrGroup_5",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strCommon"
+              }
+            },
+            "children": [
+              {
+                "id": "rh$E8qaZydv1L75mRMTY$6",
+                "name": "JSON",
+                "type": "JsonAttr_7",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLogicPath"
+                  }
+                },
+                "logicPath": [
+                  "logicPath"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "BooleanAttr"
+        ],
+        "exportPath": [
+          "BooleanAttr"
+        ]
+      },
+      "implements": {
+        "if": true
+      }
+    },
+    {
+      "type": "EnumAttr",
+      "name": {
+        "key": "enumAttrName"
+      },
+      "groupName": {
+        "key": "groupAttr"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "StringAttr_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "AttrSwitcher_4",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrSwitcher"
+        },
+        {
+          "elementType": "AttrList_6",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrList"
+        },
+        {
+          "elementType": "EnumAttr_7",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "EnumAttr"
+        },
+        {
+          "elementType": "AttrGroup_8",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrGroup"
+        },
+        {
+          "elementType": "NumberAttr_9",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "NumberAttr"
+        },
+        {
+          "elementType": "BooleanAttr_10",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "BooleanAttr"
+        },
+        {
+          "elementType": "JsonAttr_11",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "JsonAttr"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "rRtNu83CHr_Y8QK6RRRaaY",
+            "name": "List",
+            "type": "AttrList_6",
+            "logicPath": [
+              "props",
+              "options"
+            ],
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strOptions"
+              },
+              "render": {
+                "type": "slot",
+                "value": [
+                  {
+                    "id": "rw$z$4uRe6fDxhXtHFI64O",
+                    "name": "String",
+                    "type": "StringAttr_3",
+                    "props": {
+                      "label": {
+                        "type": "i18n",
+                        "key": "strLabel"
+                      },
+                      "enableI18n": true
+                    },
+                    "logicPath": [
+                      "label"
+                    ]
+                  },
+                  {
+                    "id": "rbh4jAPSYs4PVOpdG0wBSf",
+                    "name": "Switcher 4",
+                    "type": "AttrSwitcher_4",
+                    "props": {
+                      "items": {
+                        "type": "array",
+                        "value": [
+                          {
+                            "type": "object",
+                            "value": {
+                              "render": {
+                                "type": "slot",
+                                "value": [
+                                  {
+                                    "id": "r6k1fCtkAI7w7RQtwGe0WJ",
+                                    "name": "String 3",
+                                    "type": "StringAttr_3"
+                                  }
+                                ],
+                                "dynamic": true
+                              },
+                              "key": "StringAttr",
+                              "label": {
+                                "type": "i18n",
+                                "key": "stringAttrName"
+                              }
+                            }
+                          },
+                          {
+                            "type": "object",
+                            "value": {
+                              "key": "NumberAttr",
+                              "label": {
+                                "type": "i18n",
+                                "key": "numberAttrName"
+                              },
+                              "render": {
+                                "type": "slot",
+                                "value": [
+                                  {
+                                    "id": "rJWvgNUJ8yTDrqaKQVUkMe",
+                                    "name": "Number",
+                                    "type": "NumberAttr_9"
+                                  }
+                                ],
+                                "dynamic": true
+                              }
+                            }
+                          },
+                          {
+                            "type": "object",
+                            "value": {
+                              "key": "BooleanAttr",
+                              "label": {
+                                "type": "i18n",
+                                "key": "booleanAttrName"
+                              },
+                              "render": {
+                                "type": "slot",
+                                "value": [
+                                  {
+                                    "id": "r4ij0X6gBE2quwo9fKHLJ8",
+                                    "name": "Boolean",
+                                    "type": "BooleanAttr_10"
+                                  }
+                                ],
+                                "dynamic": true
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "label": {
+                        "type": "i18n",
+                        "key": "strValue"
+                      }
+                    },
+                    "logicPath": [
+                      "value"
+                    ]
+                  }
+                ],
+                "dynamic": true
+              }
+            }
+          },
+          {
+            "id": "roMuAuZaN26QSJSqO4zDZx",
+            "name": "Group",
+            "type": "AttrGroup_8",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strWrapper"
+              }
+            },
+            "children": [
+              {
+                "id": "r4cDsE19w7P2HaoX4mYPPR",
+                "name": "String 2",
+                "type": "StringAttr_3",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLabel"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "label"
+                ]
+              },
+              {
+                "id": "rBEEUy6XJVbkZJ$8tkpnOM",
+                "name": "String 4",
+                "type": "StringAttr_3",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strTip"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "tip"
+                ]
+              },
+              {
+                "id": "r5yejOoTOLMXN8Y11WqGNF",
+                "name": "Enum",
+                "type": "EnumAttr_7",
+                "props": {
+                  "options": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "object",
+                        "value": {
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "horizontal"
+                          },
+                          "label": {
+                            "type": "i18n",
+                            "key": "strHorizontal"
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "value": {
+                          "label": {
+                            "type": "i18n",
+                            "key": "strVertical"
+                          },
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "vertical"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLayout"
+                  }
+                },
+                "logicPath": [
+                  "props",
+                  "layout"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rreQo9dG2L68meR7Xn9zKm",
+            "name": "Group 2",
+            "type": "AttrGroup_8",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strCommon"
+              }
+            },
+            "children": [
+              {
+                "id": "rmcdiCvJhP3hJg8az7RdNU",
+                "name": "JSON",
+                "type": "JsonAttr_11",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLogicPath"
+                  }
+                },
+                "logicPath": [
+                  "logicPath"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "EnumAttr"
+        ],
+        "exportPath": [
+          "EnumAttr"
+        ]
+      },
+      "implements": {
+        "if": true
+      }
+    },
+    {
+      "type": "ColorAttr",
+      "name": {
+        "key": "colorAttrName"
+      },
+      "groupName": {
+        "key": "groupAttr"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "StringAttr_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "EnumAttr_4",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "EnumAttr"
+        },
+        {
+          "elementType": "AttrGroup_5",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrGroup"
+        },
+        {
+          "elementType": "JsonAttr_6",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "JsonAttr"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "rjRGTQWErIvuCHXaFlxY3Y",
+            "name": "Group",
+            "type": "AttrGroup_5",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strWrapper"
+              }
+            },
+            "children": [
+              {
+                "id": "r45fy3IDLtZVSwtlxjxSqh",
+                "name": "String",
+                "type": "StringAttr_3",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLabel"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "label"
+                ]
+              },
+              {
+                "id": "rXOwV1RbQFgG8leb2qQvI6",
+                "name": "String",
+                "type": "StringAttr_3",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strTip"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "tip"
+                ]
+              },
+              {
+                "id": "ruiJh0Nj6p47vBDm6BSaJT",
+                "name": "Enum",
+                "type": "EnumAttr_4",
+                "props": {
+                  "options": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "object",
+                        "value": {
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "horizontal"
+                          },
+                          "label": {
+                            "type": "i18n",
+                            "key": "strHorizontal"
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "value": {
+                          "label": {
+                            "type": "i18n",
+                            "key": "strVertical"
+                          },
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "vertical"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLayout"
+                  }
+                },
+                "logicPath": [
+                  "props",
+                  "layout"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "r38ROAclKtnKzjwEhRvTBg",
+            "name": "Group 2",
+            "type": "AttrGroup_5",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strCommon"
+              }
+            },
+            "children": [
+              {
+                "id": "r_TXoFTvzmzoEnexpYXAZC",
+                "name": "JSON",
+                "type": "JsonAttr_6",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLogicPath"
+                  }
+                },
+                "logicPath": [
+                  "logicPath"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "ColorAttr"
+        ],
+        "exportPath": [
+          "ColorAttr"
+        ]
+      },
+      "implements": {
+        "if": true
+      }
+    },
+    {
+      "type": "JsonAttr",
+      "name": {
+        "key": "jsonAttrName"
+      },
+      "groupName": {
+        "key": "groupAttr"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "StringAttr_2",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "AttrGroup_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrGroup"
+        },
+        {
+          "elementType": "EnumAttr_4",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "EnumAttr"
+        },
+        {
+          "elementType": "JsonAttr_5",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "JsonAttr"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "rpFTMynY$CCuklgAu$VG$1",
+            "name": "Group 2",
+            "type": "AttrGroup_3",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strWrapper"
+              }
+            },
+            "children": [
+              {
+                "id": "rAcyzHb9QMTH8TZbrbsZzx",
+                "name": "String",
+                "type": "StringAttr_2",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLabel"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "label"
+                ]
+              },
+              {
+                "id": "rtnkYcJD4cH7hl7OabbFsr",
+                "name": "String",
+                "type": "StringAttr_2",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strTip"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "tip"
+                ]
+              },
+              {
+                "id": "rZiuhJNVkGbuS6IeTK8pnI",
+                "name": "Enum",
+                "type": "EnumAttr_4",
+                "props": {
+                  "options": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "object",
+                        "value": {
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "horizontal"
+                          },
+                          "label": {
+                            "type": "i18n",
+                            "key": "strHorizontal"
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "value": {
+                          "label": {
+                            "type": "i18n",
+                            "key": "strVertical"
+                          },
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "vertical"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLayout"
+                  }
+                },
+                "logicPath": [
+                  "props",
+                  "layout"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rA2njULmgcIzRtZTGtqANG",
+            "name": "Group",
+            "type": "AttrGroup_3",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strCommon"
+              }
+            },
+            "children": [
+              {
+                "id": "rJ7DG24egvB4UyNEIQHPBI",
+                "name": "JSON",
+                "type": "JsonAttr_5",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLogicPath"
+                  }
+                },
+                "logicPath": [
+                  "logicPath"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "JsonAttr"
+        ],
+        "exportPath": [
+          "JsonAttr"
+        ]
+      },
+      "implements": {
+        "if": true
+      }
+    },
+    {
+      "type": "QuaternityAttr",
+      "name": {
+        "key": "quaternityAttrName"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "StringAttr_1",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "AttrGroup_2",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrGroup"
+        },
+        {
+          "elementType": "EnumAttr_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "EnumAttr"
+        },
+        {
+          "elementType": "JsonAttr_4",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "JsonAttr"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "rt7aGE82SzViHjXMBchTH3",
+            "name": "Group",
+            "type": "AttrGroup_2",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strWrapper"
+              }
+            },
+            "children": [
+              {
+                "id": "rvc8nSe8CwpuRI8Af4AURD",
+                "name": "String",
+                "type": "StringAttr_1",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLabel"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "label"
+                ]
+              },
+              {
+                "id": "rF371GImylF4SoVGN2_Peb",
+                "name": "String",
+                "type": "StringAttr_1",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strTip"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "tip"
+                ]
+              },
+              {
+                "id": "rCJL_CZIFW9XXi64NNfYKU",
+                "name": "Enum",
+                "type": "EnumAttr_3",
+                "props": {
+                  "options": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "object",
+                        "value": {
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "horizontal"
+                          },
+                          "label": {
+                            "type": "i18n",
+                            "key": "strHorizontal"
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "value": {
+                          "label": {
+                            "type": "i18n",
+                            "key": "strVertical"
+                          },
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "vertical"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLayout"
+                  }
+                },
+                "logicPath": [
+                  "props",
+                  "layout"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rLSs0mgcjp7H75brunpHCr",
+            "name": "Group 2",
+            "type": "AttrGroup_2",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strCommon"
+              }
+            },
+            "children": [
+              {
+                "id": "r5FF9wOTVgeoWALjYL2SO7",
+                "name": "JSON",
+                "type": "JsonAttr_4",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLogicPath"
+                  }
+                },
+                "logicPath": [
+                  "logicPath"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "QuaternityAttr"
+        ],
+        "exportPath": [
+          "QuaternityAttr"
+        ]
+      },
+      "groupName": {
+        "key": "groupAttr"
+      },
+      "implements": {
+        "if": true
+      }
+    },
+    {
+      "type": "SlotAttr",
+      "name": {
+        "key": "slotAttrName"
+      },
+      "groupName": {
+        "key": "groupAttr"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "BooleanAttr_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "componentType": "BooleanAttr"
+        },
+        {
+          "elementType": "StringAttr_4",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "AttrGroup_5",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrGroup"
+        },
+        {
+          "elementType": "EnumAttr_6",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "EnumAttr"
+        },
+        {
+          "elementType": "JsonAttr_7",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "JsonAttr"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "rnwxZsWwMdXrhBuyZbL55F",
+            "name": "Boolean",
+            "type": "BooleanAttr_3",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strDynamic"
+              }
+            },
+            "logicPath": [
+              "props",
+              "dynamic"
+            ]
+          },
+          {
+            "id": "rHh0G$XhOloPUPq4F6ieiO",
+            "name": "Group 2",
+            "type": "AttrGroup_5",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strWrapper"
+              }
+            },
+            "children": [
+              {
+                "id": "rvQaJajtusw5xsVCMUuIH$",
+                "name": "String",
+                "type": "StringAttr_4",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLabel"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "label"
+                ]
+              },
+              {
+                "id": "rB0CAGKpVtqu3KiD21JFcj",
+                "name": "String",
+                "type": "StringAttr_4",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strTip"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "tip"
+                ]
+              },
+              {
+                "id": "rB_FHDpe69bw77uqASXUKt",
+                "name": "Enum",
+                "type": "EnumAttr_6",
+                "props": {
+                  "options": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "object",
+                        "value": {
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "horizontal"
+                          },
+                          "label": {
+                            "type": "i18n",
+                            "key": "strHorizontal"
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "value": {
+                          "label": {
+                            "type": "i18n",
+                            "key": "strVertical"
+                          },
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "vertical"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLayout"
+                  }
+                },
+                "logicPath": [
+                  "props",
+                  "layout"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rYKQyntMlUmQW7eNPw3DF$",
+            "name": "Group",
+            "type": "AttrGroup_5",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strCommon"
+              }
+            },
+            "children": [
+              {
+                "id": "rauAELPWgTeLXKz_C4HeFg",
+                "name": "JSON",
+                "type": "JsonAttr_7",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLogicPath"
+                  }
+                },
+                "logicPath": [
+                  "logicPath"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "SlotAttr"
+        ],
+        "exportPath": [
+          "SlotAttr"
+        ]
+      },
+      "implements": {
+        "if": true
+      }
+    },
+    {
+      "type": "BindingAttr",
+      "name": {
+        "key": "bindingAttrName"
+      },
+      "groupName": {
+        "key": "groupAttr"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "StringAttr_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "AttrGroup_4",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrGroup"
+        },
+        {
+          "elementType": "EnumAttr_5",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "EnumAttr"
+        },
+        {
+          "elementType": "JsonAttr_6",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "JsonAttr"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "rJuywzk_L7HMXCECdtZfgY",
+            "name": "String 2",
+            "type": "StringAttr_3",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strDefaultBinderType"
+              },
+              "layout": "vertical"
+            },
+            "logicPath": [
+              "props",
+              "defaultBinderType"
+            ]
+          },
+          {
+            "id": "ruK6CetLW8jXFiy2xtHlgP",
+            "name": "JSON 2",
+            "type": "JsonAttr_6",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strIncludeBinderTypes"
+              },
+              "layout": "vertical"
+            },
+            "logicPath": [
+              "props",
+              "includeBinderTypes"
+            ]
+          },
+          {
+            "id": "rN7YQ03CemY6YzcM8k8Nvd",
+            "name": "JSON 3",
+            "type": "JsonAttr_6",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strExcludeBinderTypes"
+              },
+              "layout": "vertical"
+            },
+            "logicPath": [
+              "props",
+              "excludeBinderTypes"
+            ]
+          },
+          {
+            "id": "reLLDf5HmoOWHyWN8vKjqr",
+            "name": "Group",
+            "type": "AttrGroup_4",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strWrapper"
+              }
+            },
+            "children": [
+              {
+                "id": "rJEg9hUkNH7rzDW$RRfoa6",
+                "name": "String",
+                "type": "StringAttr_3",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLabel"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "label"
+                ]
+              },
+              {
+                "id": "r2OEoUYPkfSke518_15mDp",
+                "name": "String",
+                "type": "StringAttr_3",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strTip"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "tip"
+                ]
+              },
+              {
+                "id": "rvZP_LISuURO7RYNXhzX26",
+                "name": "Enum",
+                "type": "EnumAttr_5",
+                "props": {
+                  "options": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "object",
+                        "value": {
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "horizontal"
+                          },
+                          "label": {
+                            "type": "i18n",
+                            "key": "strHorizontal"
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "value": {
+                          "label": {
+                            "type": "i18n",
+                            "key": "strVertical"
+                          },
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "vertical"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLayout"
+                  }
+                },
+                "logicPath": [
+                  "props",
+                  "layout"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "r13GFQSFQ8EPBsufYXs7Oz",
+            "name": "Group 2",
+            "type": "AttrGroup_4",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strCommon"
+              }
+            },
+            "children": [
+              {
+                "id": "revSjpAYiEzUyO0LxlO_CG",
+                "name": "JSON",
+                "type": "JsonAttr_6",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLogicPath"
+                  }
+                },
+                "logicPath": [
+                  "logicPath"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "BindingAttr"
+        ],
+        "exportPath": [
+          "BindingAttr"
+        ]
+      },
+      "implements": {
+        "if": true
+      }
+    },
+    {
+      "type": "AttrRoot",
+      "name": {
+        "key": "attrRootName"
+      },
+      "groupName": {
+        "key": "groupContainer"
+      },
+      "hidden": true,
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "AttrNone_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrNone"
+        },
+        {
+          "elementType": "SlotAttr_4",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "SlotAttr"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "rwhOcqdf6Wl4ATJiB3GE8r",
+            "name": "None",
+            "type": "AttrNone_3"
+          },
+          {
+            "id": "rcVcvmdlFbAYrDxBddGyJr",
+            "name": "Slot",
+            "type": "SlotAttr_4",
+            "logicPath": [
+              "props",
+              "children"
+            ],
+            "if": {
+              "type": "box",
+              "boxType": "switch",
+              "case": "BooleanAttr",
+              "oldExprs": {},
+              "expr": false
+            }
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "AttrRoot"
+        ],
+        "exportPath": [
+          "AttrRoot"
+        ]
+      },
+      "slots": [
+        {
+          "logicPath": [
+            "props",
+            "children"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "AttrCategories",
+      "name": {
+        "key": "attrCategoriesName"
+      },
+      "groupName": {
+        "key": "groupContainer"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "AttrList_1",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrList"
+        },
+        {
+          "elementType": "StringAttr_2",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "SlotAttr_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "SlotAttr"
+        },
+        {
+          "elementType": "JsonAttr_4",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "JsonAttr"
+        },
+        {
+          "elementType": "AttrGroup_5",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrGroup"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "rG90DeTfSL485Ob8rcB9X4",
+            "name": "List",
+            "type": "AttrList_1",
+            "logicPath": [
+              "props",
+              "items"
+            ],
+            "props": {
+              "render": {
+                "type": "slot",
+                "value": [
+                  {
+                    "id": "r_vBJwQyP0_kHk6roSPYr1",
+                    "name": "String",
+                    "type": "StringAttr_2",
+                    "logicPath": [
+                      "key"
+                    ],
+                    "props": {
+                      "label": {
+                        "type": "i18n",
+                        "key": "strKey"
+                      }
+                    }
+                  },
+                  {
+                    "id": "rmBrwEK5U58TMvyfbmby$f",
+                    "name": "String 2",
+                    "type": "StringAttr_2",
+                    "props": {
+                      "label": {
+                        "type": "i18n",
+                        "key": "strLabel"
+                      },
+                      "enableI18n": true
+                    },
+                    "logicPath": [
+                      "label"
+                    ]
+                  },
+                  {
+                    "id": "r21ZSNWzQiCxlhbluomWUd",
+                    "name": "Slot",
+                    "type": "SlotAttr_3",
+                    "props": {
+                      "label": {
+                        "type": "i18n",
+                        "key": "strChildren"
+                      }
+                    },
+                    "logicPath": [
+                      "children"
+                    ]
+                  }
+                ],
+                "dynamic": true
+              },
+              "label": {
+                "type": "i18n",
+                "key": "strItems"
+              }
+            }
+          },
+          {
+            "id": "rKIn4hOGK$WTzMz2Qpvito",
+            "name": "Group",
+            "type": "AttrGroup_5",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strCommon"
+              }
+            },
+            "children": [
+              {
+                "id": "r7gFcrvjnxZlMxybWZp7tI",
+                "name": "JSON",
+                "type": "JsonAttr_4",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLogicPath"
+                  }
+                },
+                "logicPath": [
+                  "logicPath"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "AttrCategories"
+        ],
+        "exportPath": [
+          "AttrCategories"
+        ]
+      },
+      "slots": [
+        {
+          "type": "dynamic-path",
+          "dynamicLogicPath": [
+            "props",
+            "items",
+            "*",
+            "children"
+          ],
+          "name": {
+            "key": "strChildren"
+          }
+        }
+      ],
+      "implements": {
+        "if": true
+      }
+    },
+    {
+      "type": "AttrGroup",
+      "name": {
+        "key": "attrGroupName"
+      },
+      "groupName": {
+        "key": "groupContainer"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "SlotAttr_4",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "SlotAttr"
+        },
+        {
+          "elementType": "StringAttr_5",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "JsonAttr_6",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "JsonAttr"
+        },
+        {
+          "elementType": "AttrGroup_7",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrGroup"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "rnOAUeWlpLuU27$gP23TQf",
+            "name": "Slot",
+            "type": "SlotAttr_4",
+            "logicPath": [
+              "props",
+              "children"
+            ],
+            "if": {
+              "type": "box",
+              "boxType": "switch",
+              "case": "BooleanAttr",
+              "oldExprs": {},
+              "expr": false
+            }
+          },
+          {
+            "id": "rUcmPa5qmPGHoKh2X8ESuK",
+            "name": "String",
+            "type": "StringAttr_5",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strLabel"
+              },
+              "enableI18n": true
+            },
+            "logicPath": [
+              "props",
+              "label"
+            ]
+          },
+          {
+            "id": "rRw4FU1QSlPbWOyDyFOA7n",
+            "name": "Group",
+            "type": "AttrGroup_7",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strCommon"
+              }
+            },
+            "children": [
+              {
+                "id": "rvC_zEcRWh$$KR85ogJRpB",
+                "name": "JSON",
+                "type": "JsonAttr_6",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLogicPath"
+                  }
+                },
+                "logicPath": [
+                  "logicPath"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "AttrGroup"
+        ],
+        "exportPath": [
+          "AttrGroup"
+        ]
+      },
+      "slots": [
+        {
+          "logicPath": [
+            "props",
+            "children"
+          ]
+        }
+      ],
+      "implements": {
+        "if": true
+      }
+    },
+    {
+      "type": "AttrList",
+      "name": {
+        "key": "attrListName"
+      },
+      "groupName": {
+        "key": "groupContainer"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "SlotAttr_5",
+          "pkgName": "@p-lc/lc-types-ui",
+          "componentType": "SlotAttr"
+        },
+        {
+          "elementType": "StringAttr_6",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "AttrGroup_7",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrGroup"
+        },
+        {
+          "elementType": "EnumAttr_8",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "EnumAttr"
+        },
+        {
+          "elementType": "JsonAttr_9",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "JsonAttr"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "rT_FmPBQts5q4Ix6mP$o3X",
+            "name": "Slot",
+            "type": "SlotAttr_5",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strRender"
+              },
+              "dynamic": true
+            },
+            "logicPath": [
+              "props",
+              "render"
+            ]
+          },
+          {
+            "id": "rpofT0XYKLh2UKdndwbUDr",
+            "name": "Group 2",
+            "type": "AttrGroup_7",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strWrapper"
+              }
+            },
+            "children": [
+              {
+                "id": "rYHCSXocxLnqaPKctwPR8A",
+                "name": "String",
+                "type": "StringAttr_6",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLabel"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "label"
+                ]
+              },
+              {
+                "id": "rRvX37$RX4yGNhQoAMh0uZ",
+                "name": "String",
+                "type": "StringAttr_6",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strTip"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "tip"
+                ]
+              },
+              {
+                "id": "rF9YnJT90EV0smiTt7yjEm",
+                "name": "Enum",
+                "type": "EnumAttr_8",
+                "props": {
+                  "options": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "object",
+                        "value": {
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "horizontal"
+                          },
+                          "label": {
+                            "type": "i18n",
+                            "key": "strHorizontal"
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "value": {
+                          "label": {
+                            "type": "i18n",
+                            "key": "strVertical"
+                          },
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "vertical"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLayout"
+                  }
+                },
+                "logicPath": [
+                  "props",
+                  "layout"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rXfM3cNpYl4yITjJMTk1n8",
+            "name": "Group",
+            "type": "AttrGroup_7",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strCommon"
+              }
+            },
+            "children": [
+              {
+                "id": "rHB1Wr6ZrJnVtpPQF1UgU9",
+                "name": "JSON",
+                "type": "JsonAttr_9",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLogicPath"
+                  }
+                },
+                "logicPath": [
+                  "logicPath"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "AttrList"
+        ],
+        "exportPath": [
+          "AttrList"
+        ]
+      },
+      "slots": [
+        {
+          "logicPath": [
+            "props",
+            "render"
+          ],
+          "name": {
+            "key": "strRender"
+          },
+          "dynamicRender": true
+        }
+      ],
+      "implements": {
+        "if": true
+      }
+    },
+    {
+      "type": "AttrSwitcher",
+      "name": {
+        "key": "attrSwitcherName"
+      },
+      "groupName": {
+        "key": "groupContainer"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "AttrList_1",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrList"
+        },
+        {
+          "elementType": "StringAttr_2",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "SlotAttr_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "SlotAttr"
+        },
+        {
+          "elementType": "EnumAttr_7",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "EnumAttr"
+        },
+        {
+          "elementType": "AttrGroup_8",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrGroup"
+        },
+        {
+          "elementType": "JsonAttr_9",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "JsonAttr"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "rU0Lm84SsOKYFffzMBE5VX",
+            "name": "List",
+            "type": "AttrList_1",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strItems"
+              },
+              "render": {
+                "type": "slot",
+                "value": [
+                  {
+                    "id": "rv$M1CI6wNuO2vsCEgBx5W",
+                    "name": "String",
+                    "type": "StringAttr_2",
+                    "props": {
+                      "label": {
+                        "type": "i18n",
+                        "key": "strKey"
+                      }
+                    },
+                    "logicPath": [
+                      "key"
+                    ]
+                  },
+                  {
+                    "id": "rviSwPv6lEVXAHf7yj7miy",
+                    "name": "String",
+                    "type": "StringAttr_2",
+                    "props": {
+                      "label": {
+                        "type": "i18n",
+                        "key": "strLabel"
+                      },
+                      "enableI18n": true
+                    },
+                    "logicPath": [
+                      "label"
+                    ]
+                  },
+                  {
+                    "id": "rG6Mij72Xwv_BGEv22zXpb",
+                    "name": "Slot",
+                    "type": "SlotAttr_3",
+                    "props": {
+                      "label": {
+                        "type": "i18n",
+                        "key": "strRender"
+                      },
+                      "dynamic": true
+                    },
+                    "logicPath": [
+                      "render"
+                    ]
+                  }
+                ],
+                "dynamic": true
+              }
+            },
+            "logicPath": [
+              "props",
+              "items"
+            ]
+          },
+          {
+            "id": "rWVz97jM3wl8hOp$FxWSj3",
+            "name": "Group 2",
+            "type": "AttrGroup_8",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strWrapper"
+              }
+            },
+            "children": [
+              {
+                "id": "ryZoWWDxJux2oTKrDnpKC9",
+                "name": "String 3",
+                "type": "StringAttr_2",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLabel"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "label"
+                ]
+              },
+              {
+                "id": "rjWEo1HuZR5y_STfO4uZtm",
+                "name": "String 4",
+                "type": "StringAttr_2",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strTip"
+                  },
+                  "enableI18n": true
+                },
+                "logicPath": [
+                  "props",
+                  "tip"
+                ]
+              },
+              {
+                "id": "rLTZ8p$CLMbLyOdH0fiwiO",
+                "name": "Enum 2",
+                "type": "EnumAttr_7",
+                "props": {
+                  "options": {
+                    "type": "array",
+                    "value": [
+                      {
+                        "type": "object",
+                        "value": {
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "horizontal"
+                          },
+                          "label": {
+                            "type": "i18n",
+                            "key": "strHorizontal"
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "value": {
+                          "label": {
+                            "type": "i18n",
+                            "key": "strVertical"
+                          },
+                          "value": {
+                            "type": "box",
+                            "boxType": "switch",
+                            "case": "StringAttr",
+                            "oldExprs": {},
+                            "expr": "vertical"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLayout"
+                  }
+                },
+                "logicPath": [
+                  "props",
+                  "layout"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rLswK1RbA8jZjPgRUSGOQu",
+            "name": "Group",
+            "type": "AttrGroup_8",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strCommon"
+              }
+            },
+            "children": [
+              {
+                "id": "rxj8qNuhFgKefkdLPr8L_y",
+                "name": "JSON",
+                "type": "JsonAttr_9",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLogicPath"
+                  }
+                },
+                "logicPath": [
+                  "logicPath"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "AttrSwitcher"
+        ],
+        "exportPath": [
+          "AttrSwitcher"
+        ]
+      },
+      "slots": [
+        {
+          "type": "dynamic-path",
+          "dynamicLogicPath": [
+            "props",
+            "items",
+            "*",
+            "render"
+          ],
+          "name": {
+            "key": "strRender"
+          },
+          "dynamicRender": true
+        }
+      ],
+      "implements": {
+        "if": true
+      }
+    },
+    {
+      "type": "AttrNone",
+      "name": {
+        "key": "attrNoneName"
+      },
+      "groupName": {
+        "key": "groupContainer"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "AttrNone_1",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrNone"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "attrNone",
+            "name": "None",
+            "type": "AttrNone_1"
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "AttrRoot"
+        ],
+        "exportPath": [
+          "AttrRoot"
+        ]
+      }
+    },
+    {
+      "type": "Container",
+      "name": {
+        "key": "containerName"
+      },
+      "groupName": {
+        "key": "groupContainer"
+      },
+      "icon": "data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Csvg%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%220%200%2024%2024%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20color%3D%22%23000000%22%3E%3Cpath%20d%3D%22M3%2020.4V3.6C3%203.26863%203.26863%203%203.6%203H20.4C20.7314%203%2021%203.26863%2021%203.6V20.4C21%2020.7314%2020.7314%2021%2020.4%2021H3.6C3.26863%2021%203%2020.7314%203%2020.4Z%22%20stroke%3D%22%23000000%22%20stroke-width%3D%221.5%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E",
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "SlotAttr_2",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "SlotAttr"
+        },
+        {
+          "elementType": "AttrSwitcher_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrSwitcher"
+        },
+        {
+          "elementType": "StringAttr_4",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "JsonAttr_5",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "JsonAttr"
+        },
+        {
+          "elementType": "AttrGroup_6",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrGroup"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "rBrCkdO1hXyfPIZlxv9VgN",
+            "name": "Switcher",
+            "type": "AttrSwitcher_3",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strChildren"
+              },
+              "items": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "object",
+                    "value": {
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rv9w2rjc2BOdLLCnqvKPcH",
+                            "name": "Slot",
+                            "type": "SlotAttr_2"
+                          }
+                        ],
+                        "dynamic": true
+                      },
+                      "key": "SlotAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "slotAttrName"
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rUShuDVFvheAZ3a4K$_ocd",
+                            "name": "String",
+                            "type": "StringAttr_4"
+                          }
+                        ],
+                        "dynamic": true
+                      },
+                      "key": "StringAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "stringAttrName"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "logicPath": [
+              "props",
+              "children"
+            ]
+          },
+          {
+            "id": "riPvkicPYS$7gswFq3lR9B",
+            "name": "Group",
+            "type": "AttrGroup_6",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strCommon"
+              }
+            },
+            "children": [
+              {
+                "id": "rK3Q4DlP4vCIke$WD6RQoi",
+                "name": "JSON",
+                "type": "JsonAttr_5",
+                "props": {
+                  "label": {
+                    "type": "i18n",
+                    "key": "strLogicPath"
+                  }
+                },
+                "logicPath": [
+                  "logicPath"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "Container"
+        ],
+        "exportPath": [
+          "Container"
+        ]
+      },
+      "slots": [
+        {
+          "logicPath": [
+            "props",
+            "children"
+          ]
+        }
+      ],
+      "implements": {
+        "style": true,
+        "if": true
+      }
+    }
+  ],
+  "i18n": {
+    "en-US": {
+      "attrCategoriesName": "Categories",
+      "attrGroupName": "Group",
+      "attrListName": "List",
+      "attrNoneName": "None",
+      "attrRootName": "Low-code types",
+      "attrSwitcherName": "Switcher",
+      "bindingAttrName": "Binding",
+      "booleanAttrName": "Boolean",
+      "colorAttrName": "Color",
+      "containerName": "Container",
+      "enumAttrName": "Enum",
+      "groupAttr": "Attribute",
+      "groupContainer": "Attribute container",
+      "jsonAttrName": "JSON",
+      "name": "Low-code types",
+      "numberAttrName": "Number",
+      "quaternityAttrName": "Quaternity",
+      "slotAttrName": "Slot",
+      "strChildren": "Children",
+      "strCommon": "Common",
+      "strDefaultBinderType": "Default binder type",
+      "strDefaultValue": "Default value",
+      "strDynamic": "Dynamic",
+      "strExcludeBinderTypes": "Exclude binder types",
+      "strHorizontal": "Horizontal",
+      "strI18n": "I18n",
+      "strIncludeBinderTypes": "Include binder types",
+      "strItems": "items",
+      "strKey": "Key",
+      "strLabel": "Label",
+      "strLayout": "Layout",
+      "strLogicPath": "Logic path",
+      "strOptions": "Options",
+      "strPlaceholder": "Placeholder",
+      "strRender": "Render",
+      "strTip": "Tip",
+      "strValue": "Value",
+      "strVertical": "Vertical",
+      "strWrapper": "Wrapper",
+      "stringAttrName": "String"
+    },
+    "zh-CN": {
+      "attrCategoriesName": "分类",
+      "attrGroupName": "组",
+      "attrListName": "列表",
+      "attrNoneName": "无",
+      "attrRootName": "低代码类型",
+      "attrSwitcherName": "切换",
+      "bindingAttrName": "绑定",
+      "booleanAttrName": "布尔",
+      "colorAttrName": "颜色",
+      "containerName": "容器",
+      "enumAttrName": "枚举",
+      "groupAttr": "属性",
+      "groupContainer": "属性容器",
+      "jsonAttrName": "JSON",
+      "name": "低代码类型",
+      "numberAttrName": "数字",
+      "quaternityAttrName": "四合一",
+      "slotAttrName": "插槽",
+      "strChildren": "子元素",
+      "strCommon": "通用",
+      "strDefaultBinderType": "默认绑定器类型",
+      "strDefaultValue": "默认值",
+      "strDynamic": "动态",
+      "strExcludeBinderTypes": "不包含绑定器类型",
+      "strHorizontal": "水平",
+      "strI18n": "国际化",
+      "strIncludeBinderTypes": "包含绑定器类型",
+      "strItems": "条目",
+      "strKey": "键值",
+      "strLabel": "标签",
+      "strLayout": "布局",
+      "strLogicPath": "逻辑路径",
+      "strOptions": "选项",
+      "strPlaceholder": "占位",
+      "strRender": "渲染",
+      "strTip": "提示",
+      "strValue": "值",
+      "strVertical": "垂直",
+      "strWrapper": "包装",
+      "stringAttrName": "字符串"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+# UIDL switch box extension

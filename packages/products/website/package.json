@@ -1,0 +1,42 @@
+{
+  "name": "@p-lc/website",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "analyze": "ANALYZE=1 vite build",
+    "build": "vite build",
+    "dev": "vite --port=5892"
+  },
+  "dependencies": {
+    "@lc-types/antd": "workspace:^",
+    "@p-lc/antd-suite": "workspace:^",
+    "@p-lc/lc-types-suite": "workspace:^",
+    "@p-lc/lc-types-ui": "workspace:^",
+    "@p-lc/pd": "workspace:^",
+    "@p-lc/react-and-vue-suite": "workspace:^",
+    "@p-lc/react-shared": "workspace:^",
+    "@p-lc/shared": "workspace:^",
+    "@p-lc/uidl": "workspace:^",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "antd": "^5.20.0",
+    "iconoir-react": "^7.8.0",
+    "lodash-uni": "^1.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.1",
+    "styled-components": "^6.1.12",
+    "vue": "^3.4.35"
+  },
+  "devDependencies": {
+    "@mdx-js/rollup": "^3.0.1",
+    "@vitejs/plugin-react": "^4.3.1",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "vite": "^5.4.0",
+    "vite-bundle-analyzer": "^0.10.3",
+    "vite-plugin-checker": "^0.7.2",
+    "vite-plugin-dts": "^4.0.1",
+    "vitest": "^2.0.5"
+  }
+}

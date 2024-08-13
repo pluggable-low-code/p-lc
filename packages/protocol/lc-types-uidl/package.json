@@ -1,0 +1,25 @@
+{
+  "name": "@p-lc/lc-types-uidl",
+  "version": "0.0.1",
+  "description": "Low-code types UIDL",
+  "homepage": "https://pluggable-low-code.github.io",
+  "bugs": {
+    "url": "https://github.com/pluggable-low-code/p-lc/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pluggable-low-code/p-lc"
+  },
+  "license": "MIT",
+  "author": "@brookshuihualee",
+  "sideEffects": false,
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "types": "src/index.d.ts",
+  "dependencies": {
+    "@p-lc/pd": "workspace:^",
+    "@p-lc/uidl": "workspace:^",
+    "@p-lc/uidl-ext-i18n": "workspace:^",
+    "@p-lc/uidl-utils": "workspace:^"
+  }
+}

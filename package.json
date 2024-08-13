@@ -1,0 +1,55 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "pnpm --stream -F '*' build",
+    "build:demo:lc-types": "pnpm --stream -F '@p-lc/lc-types-demo...' build",
+    "build:demo:scratch": "pnpm --stream -F '@p-lc/scratch-demo...' build",
+    "build:editor": "pnpm --stream -F '@p-lc/editor...' build",
+    "build:runtime:react": "pnpm --stream -F '@p-lc/react-runtime...' build",
+    "build:runtime:vue": "pnpm --stream -F '@p-lc/vue-runtime...' build",
+    "clean": "pnpm -r exec rm -rf node_modules",
+    "dev": "pnpm --parallel -F '*' dev",
+    "dev:demo:lc-types": "pnpm --parallel -F '@p-lc/lc-types-demo...' dev",
+    "dev:demo:scratch": "pnpm --parallel -F '@p-lc/scratch-demo...' dev",
+    "dev:editor": "pnpm --parallel -F '@p-lc/editor...' dev",
+    "dev:runtime:react": "pnpm --parallel -F '@p-lc/react-runtime...' dev",
+    "dev:runtime:vue": "pnpm --parallel -F '@p-lc/vue-runtime...' dev",
+    "lint": "eslint './packages/*/*/src/**/*.{ts,tsx,vue}'",
+    "lint:fix": "eslint --fix './packages/*/*/src/**/*.{ts,tsx,vue}'",
+    "publish-npm": "pnpm publish -r",
+    "publish-npm:pre-release": "pnpm publish -r --tag next",
+    "test": "pnpm --parallel -F '*' test",
+    "test:w": "pnpm --parallel -F '*' test:w"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.7",
+    "@eslint/compat": "^1.1.1",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.8.0",
+    "@p-lc/lc-types-cli": "workspace:^",
+    "@tsconfig/recommended": "^1.0.7",
+    "@types/node": "^20.12.7",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.8.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-dirs": "^0.0.4",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-vue": "^9.27.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^4.0.0",
+    "prettier-plugin-packagejson": "^2.5.1",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.4",
+    "zx": "^8.1.4"
+  },
+  "engines": {
+    "pnpm": ">=8.15.1"
+  }
+}

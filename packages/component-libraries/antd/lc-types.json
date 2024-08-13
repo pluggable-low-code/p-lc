@@ -1,0 +1,2185 @@
+{
+  "pkgName": "@lc-types/antd",
+  "pkgVersion": "0.0.1",
+  "name": "Ant Design (In progress)",
+  "components": [
+    {
+      "type": "Button",
+      "name": {
+        "key": "buttonName"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "StringAttr_1",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "AttrSwitcher_2",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrSwitcher"
+        },
+        {
+          "elementType": "BindingAttr_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "BindingAttr"
+        },
+        {
+          "elementType": "SlotAttr_4",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "SlotAttr"
+        },
+        {
+          "elementType": "EnumAttr_5",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "EnumAttr"
+        },
+        {
+          "elementType": "BooleanAttr_6",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "BooleanAttr"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "rYO2HEyN_mLMXGXKk0_z90",
+            "name": "Switcher",
+            "type": "AttrSwitcher_2",
+            "props": {
+              "items": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "StringAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "stringAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "r5SedRHih8uQPtnap0mav8",
+                            "name": "String",
+                            "type": "StringAttr_1",
+                            "props": {
+                              "enableI18n": true
+                            }
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "BindingAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "bindingAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rVB857NJk$NWfcH0sNoi9R",
+                            "name": "Binding",
+                            "type": "BindingAttr_3"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "SlotAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "slotAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rwP9B5rcpoUx_UZdBa4sIU",
+                            "name": "Slot",
+                            "type": "SlotAttr_4"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "label": {
+                "type": "i18n",
+                "key": "strChildren"
+              }
+            },
+            "logicPath": [
+              "props",
+              "children"
+            ]
+          },
+          {
+            "id": "rkO15bpUXhDL1AIHyreOFn",
+            "name": "Switcher 2",
+            "type": "AttrSwitcher_2",
+            "props": {
+              "items": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "static",
+                      "label": {
+                        "type": "i18n",
+                        "key": "switcherStatic"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rjqQTc4AMM4oZOB0mXUhr5",
+                            "name": "Enum",
+                            "type": "EnumAttr_5",
+                            "props": {
+                              "options": {
+                                "type": "array",
+                                "value": [
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strDefault"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "default"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strPrimary"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "primary"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strDashed"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "dashed"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strLink"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "link"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strText"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "text"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "BindingAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "bindingAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rBFsISii00ALLK2oYsmgKZ",
+                            "name": "Binding 3",
+                            "type": "BindingAttr_3"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "label": {
+                "type": "i18n",
+                "key": "strType"
+              }
+            },
+            "logicPath": [
+              "props",
+              "type"
+            ]
+          },
+          {
+            "id": "rgUzligyhkpKDXvC0DFMUG",
+            "name": "Switcher 3",
+            "type": "AttrSwitcher_2",
+            "props": {
+              "items": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "static",
+                      "label": {
+                        "type": "i18n",
+                        "key": "switcherStatic"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "ryy6MabmjmaqUxcAPsOm9R",
+                            "name": "Boolean",
+                            "type": "BooleanAttr_6"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "BindingAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "bindingAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rXYYpyhv7W3R3PGRSiW_m8",
+                            "name": "Binding 4",
+                            "type": "BindingAttr_3"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "label": {
+                "type": "i18n",
+                "key": "strDanger"
+              }
+            },
+            "logicPath": [
+              "props",
+              "danger"
+            ]
+          },
+          {
+            "id": "reT3ToznvEV2FH__6WZTZh",
+            "name": "Binding 2",
+            "type": "BindingAttr_3",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strOnClick"
+              }
+            },
+            "logicPath": [
+              "props",
+              "onClick"
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "Button"
+        ],
+        "exportPath": [
+          "Button"
+        ]
+      },
+      "groupName": {
+        "key": "groupGeneral"
+      },
+      "slots": [
+        {
+          "logicPath": [
+            "props",
+            "children"
+          ]
+        }
+      ],
+      "implements": {
+        "style": true,
+        "if": true,
+        "for": true
+      },
+      "initializer": {
+        "partialElement": {
+          "en-US": {
+            "props": {
+              "children": {
+                "type": "box",
+                "boxType": "switch",
+                "case": "StringAttr",
+                "oldExprs": {},
+                "expr": "Button"
+              }
+            }
+          },
+          "zh-CN": {
+            "props": {
+              "children": {
+                "type": "box",
+                "boxType": "switch",
+                "case": "StringAttr",
+                "oldExprs": {},
+                "expr": "按钮"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "TypographyText",
+      "name": {
+        "key": "typographyTextName"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "StringAttr_1",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "AttrSwitcher_2",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrSwitcher"
+        },
+        {
+          "elementType": "BindingAttr_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "BindingAttr"
+        },
+        {
+          "elementType": "SlotAttr_4",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "SlotAttr"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "rrT_G$AUVZcBbkN8Tk5djs",
+            "name": "Switcher",
+            "type": "AttrSwitcher_2",
+            "props": {
+              "items": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "StringAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "stringAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rjcUBb1e46mbVVsPpJo010",
+                            "name": "String",
+                            "type": "StringAttr_1",
+                            "props": {
+                              "enableI18n": true
+                            }
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "BindingAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "bindingAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rLiObIQdf0gFehhbAg50rh",
+                            "name": "Binding",
+                            "type": "BindingAttr_3"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "SlotAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "slotAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rKeg4dLHh146zDogX2gnHH",
+                            "name": "Slot",
+                            "type": "SlotAttr_4"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "label": {
+                "type": "i18n",
+                "key": "strChildren"
+              }
+            },
+            "logicPath": [
+              "props",
+              "children"
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "Typography",
+          "Text"
+        ],
+        "exportPath": [
+          "Typography",
+          "Text"
+        ]
+      },
+      "groupName": {
+        "key": "groupGeneral"
+      },
+      "initializer": {
+        "partialElement": {
+          "en-US": {
+            "props": {
+              "children": {
+                "type": "box",
+                "boxType": "switch",
+                "case": "StringAttr",
+                "oldExprs": {},
+                "expr": "Text"
+              }
+            }
+          },
+          "zh-CN": {
+            "props": {
+              "children": {
+                "type": "box",
+                "boxType": "switch",
+                "case": "StringAttr",
+                "oldExprs": {},
+                "expr": "文本"
+              }
+            }
+          }
+        }
+      },
+      "slots": [
+        {
+          "logicPath": [
+            "props",
+            "children"
+          ]
+        }
+      ],
+      "implements": {
+        "style": true,
+        "if": true,
+        "for": true
+      }
+    },
+    {
+      "type": "Flex",
+      "name": {
+        "key": "flexName"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "SlotAttr_1",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "SlotAttr"
+        },
+        {
+          "elementType": "BooleanAttr_2",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "BooleanAttr"
+        },
+        {
+          "elementType": "EnumAttr_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "EnumAttr"
+        },
+        {
+          "elementType": "StringAttr_4",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "AttrSwitcher_5",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrSwitcher"
+        },
+        {
+          "elementType": "BindingAttr_6",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "BindingAttr"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "rwW1yfvLuJMqMch4F03TGe",
+            "name": "Switcher",
+            "type": "AttrSwitcher_5",
+            "props": {
+              "items": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "static",
+                      "label": {
+                        "type": "i18n",
+                        "key": "switcherStatic"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rZSdjUHlxhxsomOFzvbExf",
+                            "name": "Boolean",
+                            "type": "BooleanAttr_2"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "BindingAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "bindingAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rsrATa0$YioBOCffHC3rZ3",
+                            "name": "Binding",
+                            "type": "BindingAttr_6"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "label": {
+                "type": "i18n",
+                "key": "strVertical"
+              }
+            },
+            "logicPath": [
+              "props",
+              "vertical"
+            ]
+          },
+          {
+            "id": "rm_8EoIQblzD2dgxrYwfSZ",
+            "name": "Switcher 2",
+            "type": "AttrSwitcher_5",
+            "props": {
+              "items": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "static",
+                      "label": {
+                        "type": "i18n",
+                        "key": "switcherStatic"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rI7qQIq929KeU9f0u70shK",
+                            "name": "Enum",
+                            "type": "EnumAttr_3",
+                            "props": {
+                              "options": {
+                                "type": "array",
+                                "value": [
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strNoWrap"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "no-wrap"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strWrap"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "wrap"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strWrapReverse"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "wrap-reverse"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "BindingAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "bindingAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rz7QPaZ3LgvFfg_dSH$zee",
+                            "name": "Binding 2",
+                            "type": "BindingAttr_6"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "label": {
+                "type": "i18n",
+                "key": "strWrap"
+              }
+            },
+            "logicPath": [
+              "props",
+              "wrap"
+            ]
+          },
+          {
+            "id": "r9TaiJ459q_welKg5xp1xF",
+            "name": "Switcher 3",
+            "type": "AttrSwitcher_5",
+            "props": {
+              "items": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "static",
+                      "label": {
+                        "type": "i18n",
+                        "key": "switcherStatic"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "r$TfQDsq_SaDVQyWUwDr7I",
+                            "name": "Enum 2",
+                            "type": "EnumAttr_3",
+                            "props": {
+                              "options": {
+                                "type": "array",
+                                "value": [
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strFlexStart"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "start"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strFlexEnd"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "end"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strCenter"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "center"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strSpaceBetween"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "space-between"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strSpaceAround"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "space-around"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "BindingAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "bindingAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rylUru3OJY$Y4Sr0r8JXcd",
+                            "name": "Binding 3",
+                            "type": "BindingAttr_6"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "label": {
+                "type": "i18n",
+                "key": "strFlexJustify"
+              }
+            },
+            "logicPath": [
+              "props",
+              "justify"
+            ]
+          },
+          {
+            "id": "rNIZpJ_HSPegD$bBjaaMty",
+            "name": "Switcher 4",
+            "type": "AttrSwitcher_5",
+            "props": {
+              "items": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "static",
+                      "label": {
+                        "type": "i18n",
+                        "key": "switcherStatic"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rJPiI6g9xl5CRXwHMfa5V6",
+                            "name": "Enum 3",
+                            "type": "EnumAttr_3",
+                            "props": {
+                              "options": {
+                                "type": "array",
+                                "value": [
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strFlexStart"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "start"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strFlexEnd"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "end"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strCenter"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "center"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strBaseline"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "baseline"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strStretch"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "stretch"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "BindingAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "bindingAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "r8DNj_yZUr$kiHhVv4Zylf",
+                            "name": "Binding 4",
+                            "type": "BindingAttr_6"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "label": {
+                "type": "i18n",
+                "key": "strFlexAlign"
+              }
+            },
+            "logicPath": [
+              "props",
+              "align"
+            ]
+          },
+          {
+            "id": "rQVpyldHzew7R4YLfaxUe5",
+            "name": "Switcher 5",
+            "type": "AttrSwitcher_5",
+            "props": {
+              "items": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "static",
+                      "label": {
+                        "type": "i18n",
+                        "key": "switcherStatic"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "razXGVFCXAHQP0XHuaHQWz",
+                            "name": "String",
+                            "type": "StringAttr_4"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "BindingAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "bindingAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rERfOPEFF5Y4e9KVL$FebC",
+                            "name": "Binding 5",
+                            "type": "BindingAttr_6"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "label": {
+                "type": "i18n",
+                "key": "strFlex"
+              }
+            },
+            "logicPath": [
+              "props",
+              "flex"
+            ]
+          },
+          {
+            "id": "rxv4lqdtSaGHsSXu3uKVMU",
+            "name": "Switcher 6",
+            "type": "AttrSwitcher_5",
+            "props": {
+              "items": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "EnumAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "enumAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rgb5Gz$GCduU3A8aiAw4vW",
+                            "name": "Enum 4",
+                            "type": "EnumAttr_3",
+                            "props": {
+                              "options": {
+                                "type": "array",
+                                "value": [
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strSmall"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "small"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strMiddle"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "middle"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "object",
+                                    "value": {
+                                      "label": {
+                                        "type": "i18n",
+                                        "key": "strLarge"
+                                      },
+                                      "value": {
+                                        "type": "box",
+                                        "boxType": "switch",
+                                        "case": "StringAttr",
+                                        "oldExprs": {},
+                                        "expr": "large"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "StringAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "stringAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rknjqChGoioNXELoGD8LhD",
+                            "name": "String 2",
+                            "type": "StringAttr_4"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "BindingAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "bindingAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rt7Gzktc_7eVAq8_mOCHE9",
+                            "name": "Binding 6",
+                            "type": "BindingAttr_6"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "label": {
+                "type": "i18n",
+                "key": "strGap"
+              }
+            },
+            "logicPath": [
+              "props",
+              "gap"
+            ]
+          },
+          {
+            "id": "rjRDOWwIwJZkkD9PirlZBJ",
+            "name": "Slot",
+            "type": "SlotAttr_1",
+            "logicPath": [
+              "props",
+              "children"
+            ],
+            "if": {
+              "type": "box",
+              "boxType": "switch",
+              "case": "static",
+              "oldExprs": {},
+              "expr": false
+            }
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "Component"
+        ],
+        "exportPath": [
+          "Component"
+        ]
+      },
+      "slots": [
+        {
+          "logicPath": [
+            "props",
+            "children"
+          ]
+        }
+      ],
+      "groupName": {
+        "key": "groupLayout"
+      },
+      "implements": {
+        "style": true,
+        "if": true,
+        "for": true
+      }
+    },
+    {
+      "type": "Checkbox",
+      "name": {
+        "key": "checkboxName"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "BooleanAttr_1",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "BooleanAttr"
+        },
+        {
+          "elementType": "BindingAttr_2",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "BindingAttr"
+        },
+        {
+          "elementType": "StringAttr_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "AttrSwitcher_4",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrSwitcher"
+        },
+        {
+          "elementType": "SlotAttr_5",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "SlotAttr"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "ry0$fdkxdBcJ1sVZeaoojZ",
+            "name": "Switcher",
+            "type": "AttrSwitcher_4",
+            "props": {
+              "items": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "StringAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "stringAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rUzVR78EU1Cci8cyKeck5Z",
+                            "name": "String",
+                            "type": "StringAttr_3",
+                            "props": {
+                              "enableI18n": true
+                            }
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "BindingAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "bindingAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rmANmNTEoK8qVKrxYuizD1",
+                            "name": "Binding 2",
+                            "type": "BindingAttr_2"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "label": {
+                "type": "i18n",
+                "key": "strChildren"
+              }
+            },
+            "logicPath": [
+              "props",
+              "children"
+            ]
+          },
+          {
+            "id": "rNIkpijPt$1gBeVihvsOnw",
+            "name": "Switcher 2",
+            "type": "AttrSwitcher_4",
+            "props": {
+              "items": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "static",
+                      "label": {
+                        "type": "i18n",
+                        "key": "switcherStatic"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rAmnW$$_xIALNcy$0YqCla",
+                            "name": "Boolean",
+                            "type": "BooleanAttr_1"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "BindingAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "bindingAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "ryPs2n7Eo_GsDS5IOb64Et",
+                            "name": "Binding 3",
+                            "type": "BindingAttr_2"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "label": {
+                "type": "i18n",
+                "key": "strChecked"
+              }
+            },
+            "logicPath": [
+              "props",
+              "checked"
+            ]
+          },
+          {
+            "id": "rtxs7TaJMVV4jEvVPiCI$J",
+            "name": "Binding",
+            "type": "BindingAttr_2",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strOnChange"
+              }
+            },
+            "logicPath": [
+              "props",
+              "onChange"
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "Checkbox"
+        ],
+        "exportPath": [
+          "Checkbox"
+        ]
+      },
+      "groupName": {
+        "key": "groupDataEntry"
+      },
+      "implements": {
+        "style": true,
+        "if": true,
+        "for": true
+      }
+    },
+    {
+      "type": "Input",
+      "name": {
+        "key": "inputName"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "StringAttr_1",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "BindingAttr_2",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "BindingAttr"
+        },
+        {
+          "elementType": "AttrSwitcher_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrSwitcher"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "rLrBAv1JN5Ql2jV0tpDlQJ",
+            "name": "Switcher",
+            "type": "AttrSwitcher_3",
+            "props": {
+              "items": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "static",
+                      "label": {
+                        "type": "i18n",
+                        "key": "switcherStatic"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "r_BtQamN3QcdRfijmZmGgR",
+                            "name": "String",
+                            "type": "StringAttr_1"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "BindingAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "bindingAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rtWlz_Txo4gUk7S2zL7Qbu",
+                            "name": "Binding 2",
+                            "type": "BindingAttr_2"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "label": {
+                "type": "i18n",
+                "key": "strValue"
+              }
+            },
+            "logicPath": [
+              "props",
+              "value"
+            ]
+          },
+          {
+            "id": "rT1Hl6QyVZVvK78gdCmago",
+            "name": "Binding",
+            "type": "BindingAttr_2",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strOnChange"
+              }
+            },
+            "logicPath": [
+              "props",
+              "onChange"
+            ]
+          },
+          {
+            "id": "rnfGgdJrA2PfahsBeUTLf_",
+            "name": "Switcher 2",
+            "type": "AttrSwitcher_3",
+            "props": {
+              "items": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "static",
+                      "label": {
+                        "type": "i18n",
+                        "key": "switcherStatic"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "r6KX9IVQIXaYOptYMZEsBW",
+                            "name": "String 2",
+                            "type": "StringAttr_1",
+                            "props": {
+                              "enableI18n": true
+                            }
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "BindingAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "bindingAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rQOJbkMdDX8tXVxnw7G1Yz",
+                            "name": "Binding 3",
+                            "type": "BindingAttr_2"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "label": {
+                "type": "i18n",
+                "key": "strPlaceholder"
+              }
+            },
+            "logicPath": [
+              "props",
+              "placeholder"
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "Input"
+        ],
+        "exportPath": [
+          "Input"
+        ]
+      },
+      "groupName": {
+        "key": "groupDataEntry"
+      },
+      "implements": {
+        "style": true,
+        "if": true,
+        "for": true
+      }
+    },
+    {
+      "type": "Table",
+      "name": {
+        "key": "tableName"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "JsonAttr_1",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "JsonAttr"
+        },
+        {
+          "elementType": "AttrSwitcher_2",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrSwitcher"
+        },
+        {
+          "elementType": "BindingAttr_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "BindingAttr"
+        },
+        {
+          "elementType": "AttrList_4",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrList"
+        },
+        {
+          "elementType": "StringAttr_5",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "r4yo_wNIMoiMemxselS8FH",
+            "name": "Switcher",
+            "type": "AttrSwitcher_2",
+            "props": {
+              "items": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "static",
+                      "label": {
+                        "type": "i18n",
+                        "key": "switcherStatic"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rIOhiI6Qc6OUVibWvAEDaH",
+                            "name": "JSON",
+                            "type": "JsonAttr_1"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "BindingAttr",
+                      "label": {
+                        "type": "i18n",
+                        "key": "bindingAttrName"
+                      },
+                      "render": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rBcuMzhasZzsncYELsBk3X",
+                            "name": "Binding",
+                            "type": "BindingAttr_3"
+                          }
+                        ],
+                        "dynamic": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "label": {
+                "type": "i18n",
+                "key": "strDataSource"
+              },
+              "layout": "vertical"
+            },
+            "logicPath": [
+              "props",
+              "dataSource"
+            ]
+          },
+          {
+            "id": "rmwp20kr_oqk10MhKhyrdC",
+            "name": "List",
+            "type": "AttrList_4",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strColumns"
+              },
+              "render": {
+                "type": "slot",
+                "value": [
+                  {
+                    "id": "rCBfDho5CrwYXeNV3zrkiI",
+                    "name": "String",
+                    "type": "StringAttr_5",
+                    "props": {
+                      "label": {
+                        "type": "i18n",
+                        "key": "strTitle"
+                      },
+                      "enableI18n": true
+                    },
+                    "logicPath": [
+                      "title"
+                    ]
+                  },
+                  {
+                    "id": "r14RfqZJI474HmbTCil2xz",
+                    "name": "String 2",
+                    "type": "StringAttr_5",
+                    "props": {
+                      "label": {
+                        "type": "i18n",
+                        "key": "strDataIndex"
+                      },
+                      "enableI18n": true
+                    },
+                    "logicPath": [
+                      "dataIndex"
+                    ]
+                  },
+                  {
+                    "id": "rBqXK9QRhM81rOdfq08z1u",
+                    "name": "String 3",
+                    "type": "StringAttr_5",
+                    "props": {
+                      "label": {
+                        "type": "i18n",
+                        "key": "strKey"
+                      },
+                      "enableI18n": true
+                    },
+                    "logicPath": [
+                      "key"
+                    ]
+                  }
+                ],
+                "dynamic": true
+              }
+            },
+            "logicPath": [
+              "props",
+              "columns"
+            ]
+          },
+          {
+            "id": "roDgwRcJQu5UiG5jg$Ie6X",
+            "name": "String 4",
+            "type": "StringAttr_5",
+            "props": {
+              "label": {
+                "type": "i18n",
+                "key": "strRowKey"
+              }
+            },
+            "logicPath": [
+              "props",
+              "rowKey"
+            ]
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "Table"
+        ],
+        "exportPath": [
+          "Table"
+        ]
+      },
+      "implements": {
+        "style": true,
+        "if": true,
+        "for": true
+      },
+      "groupName": {
+        "key": "groupDataDisplay"
+      },
+      "initializer": {
+        "partialElement": {
+          "en-US": {
+            "props": {
+              "dataSource": {
+                "type": "box",
+                "boxType": "switch",
+                "case": "static",
+                "oldExprs": {},
+                "expr": [
+                  {
+                    "name": "Tom",
+                    "age": 85
+                  },
+                  {
+                    "name": "Jerry",
+                    "age": 84
+                  }
+                ]
+              },
+              "columns": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "object",
+                    "value": {
+                      "title": "Name",
+                      "dataIndex": "name"
+                    }
+                  },
+                  {
+                    "type": "static",
+                    "value": {
+                      "title": "Age",
+                      "dataIndex": "age"
+                    }
+                  }
+                ]
+              },
+              "rowKey": "name"
+            }
+          },
+          "zh-CN": {
+            "props": {
+              "dataSource": {
+                "type": "box",
+                "boxType": "switch",
+                "case": "static",
+                "oldExprs": {},
+                "expr": [
+                  {
+                    "name": "汤姆",
+                    "age": 85
+                  },
+                  {
+                    "name": "杰瑞",
+                    "age": 84
+                  }
+                ]
+              },
+              "columns": [
+                {
+                  "title": "名字",
+                  "dataIndex": "name"
+                },
+                {
+                  "title": "年龄",
+                  "dataIndex": "age"
+                }
+              ],
+              "rowKey": "name"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "i18n": {
+    "en-US": {
+      "bindingAttrName": "Binding",
+      "buttonName": "Button",
+      "checkboxName": "Checkbox",
+      "enumAttrName": "Enum",
+      "flexName": "Flex",
+      "groupDataDisplay": "Data display",
+      "groupDataEntry": "Data entry",
+      "groupGeneral": "General",
+      "groupLayout": "Layout",
+      "inputName": "Input",
+      "slotAttrName": "Slot",
+      "strBaseline": "Baseline",
+      "strCenter": "Center",
+      "strChecked": "Checked",
+      "strChildren": "Children",
+      "strColumns": "Columns",
+      "strDanger": "Danger",
+      "strDashed": "Dashed",
+      "strDataIndex": "Data index",
+      "strDataSource": "Data source",
+      "strDefault": "Default",
+      "strFlex": "Flex",
+      "strFlexAlign": "Align",
+      "strFlexEnd": "End",
+      "strFlexJustify": "Justify",
+      "strFlexStart": "Start",
+      "strGap": "Gap",
+      "strKey": "Key",
+      "strLarge": "Large",
+      "strLink": "Link",
+      "strMiddle": "Middle",
+      "strNoWrap": "No wrap",
+      "strOnChange": "On change",
+      "strOnClick": "On click",
+      "strPlaceholder": "Placeholder",
+      "strPrimary": "Primary",
+      "strRowKey": "Row key",
+      "strSmall": "Small",
+      "strSpaceAround": "Space around",
+      "strSpaceBetween": "Space between",
+      "strStretch": "Stretch",
+      "strText": "Text",
+      "strTitle": "Title",
+      "strType": "Type",
+      "strValue": "Value",
+      "strVertical": "Vertical",
+      "strWrap": "Wrap",
+      "strWrapReverse": "Wrap reverse",
+      "stringAttrName": "String",
+      "switcherStatic": "Static",
+      "tableName": "Table",
+      "typographyTextName": "Typography text"
+    },
+    "zh-CN": {
+      "bindingAttrName": "绑定",
+      "buttonName": "按钮",
+      "checkboxName": "多选框",
+      "enumAttrName": "枚举",
+      "flexName": "弹性布局",
+      "groupDataDisplay": "数据展示",
+      "groupDataEntry": "数据录入",
+      "groupGeneral": "通用",
+      "groupLayout": "布局",
+      "inputName": "输入框",
+      "slotAttrName": "插槽",
+      "strBaseline": "文字对齐",
+      "strCenter": "居中",
+      "strChecked": "选中",
+      "strChildren": "子元素",
+      "strColumns": "列",
+      "strDanger": "危险",
+      "strDashed": "虚线",
+      "strDataIndex": "数据下标",
+      "strDataSource": "数据源",
+      "strDefault": "默认",
+      "strFlex": "弹性缩放",
+      "strFlexAlign": "辅轴对齐",
+      "strFlexEnd": "终点对齐",
+      "strFlexJustify": "主轴对齐",
+      "strFlexStart": "起点对齐",
+      "strGap": "间隔",
+      "strKey": "键值",
+      "strLarge": "大",
+      "strLink": "链接",
+      "strMiddle": "中",
+      "strNoWrap": "不换行",
+      "strOnChange": "变化事件",
+      "strOnClick": "点击事件",
+      "strPlaceholder": "占位",
+      "strPrimary": "主要",
+      "strRowKey": "行键值",
+      "strSmall": "小",
+      "strSpaceAround": "空白环绕",
+      "strSpaceBetween": "空白间隔",
+      "strStretch": "高度占满",
+      "strText": "文本",
+      "strTitle": "标题",
+      "strType": "类型",
+      "strValue": "值",
+      "strVertical": "垂直",
+      "strWrap": "换行",
+      "strWrapReverse": "反向换行",
+      "stringAttrName": "字符串",
+      "switcherStatic": "静态",
+      "tableName": "表格",
+      "typographyTextName": "排版文本"
+    }
+  }
+}

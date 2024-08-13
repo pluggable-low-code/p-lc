@@ -1,0 +1,41 @@
+{
+  "name": "@p-lc/react-component-library-shared",
+  "version": "0.0.1",
+  "description": "Shared code of React component library",
+  "homepage": "https://pluggable-low-code.github.io",
+  "bugs": {
+    "url": "https://github.com/pluggable-low-code/p-lc/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pluggable-low-code/p-lc"
+  },
+  "license": "MIT",
+  "author": "@brookshuihualee",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build -w --emptyOutDir=false",
+    "test": "vitest run --passWithNoTests",
+    "test:w": "vitest"
+  },
+  "dependencies": {
+    "@p-lc/shared": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@vitejs/plugin-react": "^4.3.1",
+    "react": "^18.3.1",
+    "vite": "^5.4.0",
+    "vite-plugin-checker": "^0.7.2",
+    "vite-plugin-dts": "^4.0.1",
+    "vite-plugin-externalize-deps": "^0.8.0",
+    "vitest": "^2.0.5"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  }
+}

@@ -1,0 +1,1 @@
+# Editor logo store plugins

@@ -1,0 +1,64 @@
+{
+  "name": "@p-lc/lc-types-ui",
+  "version": "0.0.1",
+  "description": "Low-code types UI",
+  "homepage": "https://pluggable-low-code.github.io",
+  "bugs": {
+    "url": "https://github.com/pluggable-low-code/p-lc/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pluggable-low-code/p-lc"
+  },
+  "license": "MIT",
+  "author": "@brookshuihualee",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "pnpm build:components && pnpm build:i18n",
+    "build:components": "vite build",
+    "build:i18n": "vite build -c vite-i18n.config.ts --emptyOutDir=false",
+    "dev": "vite build -w --emptyOutDir=false & vite build -w -c vite-i18n.config.ts --emptyOutDir=false",
+    "lct": "lct",
+    "test": "vitest run --passWithNoTests",
+    "test:w": "vitest"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "^6.1.0",
+    "@dnd-kit/sortable": "^8.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@p-lc/lc-types-uidl": "workspace:^",
+    "@p-lc/lc-types-uidl-utils": "workspace:^",
+    "@p-lc/react-component-library-shared": "workspace:^",
+    "@p-lc/react-shared": "workspace:^",
+    "@p-lc/shared": "workspace:^",
+    "@p-lc/uidl": "workspace:^",
+    "@p-lc/uidl-ext-i18n": "workspace:^",
+    "@p-lc/uidl-ext-switch-box": "workspace:^",
+    "@p-lc/uidl-utils": "workspace:^",
+    "antd": "^5.20.0",
+    "iconoir-react": "^7.8.0",
+    "lodash-uni": "^1.2.0",
+    "react-use": "^17.5.1",
+    "styled-components": "^6.1.12"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^5.4.0",
+    "vite-plugin-checker": "^0.7.2",
+    "vite-plugin-dts": "^4.0.1",
+    "vite-plugin-externalize-deps": "^0.8.0",
+    "vitest": "^2.0.5"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "lc-types": "lc-types.json"
+}

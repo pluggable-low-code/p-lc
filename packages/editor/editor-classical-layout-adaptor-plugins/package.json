@@ -1,0 +1,52 @@
+{
+  "name": "@p-lc/editor-classical-layout-adaptor-plugins",
+  "version": "0.0.1",
+  "description": "Editor classical layout adaptor plugins",
+  "homepage": "https://pluggable-low-code.github.io",
+  "bugs": {
+    "url": "https://github.com/pluggable-low-code/p-lc/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pluggable-low-code/p-lc"
+  },
+  "license": "MIT",
+  "author": "@brookshuihualee",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build -w --emptyOutDir=false",
+    "test": "vitest run --passWithNoTests",
+    "test:w": "vitest"
+  },
+  "dependencies": {
+    "@p-lc/editor": "workspace:^",
+    "@p-lc/editor-classical-layout-plugins": "workspace:^",
+    "@p-lc/editor-component-library-store-plugins": "workspace:^",
+    "@p-lc/editor-data-store-plugins": "workspace:^",
+    "@p-lc/editor-element-attributes-store-plugins": "workspace:^",
+    "@p-lc/editor-element-tree-store-plugins": "workspace:^",
+    "@p-lc/editor-i18n-edit-store-plugins": "workspace:^",
+    "@p-lc/editor-logo-store-plugins": "workspace:^",
+    "@p-lc/editor-toolbar-plugins": "workspace:^",
+    "@p-lc/react-previewer": "workspace:^",
+    "@p-lc/shared": "workspace:^",
+    "lodash-uni": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@vitejs/plugin-react": "^4.3.1",
+    "react": "^18.3.1",
+    "vite": "^5.4.0",
+    "vite-plugin-checker": "^0.7.2",
+    "vite-plugin-dts": "^4.0.1",
+    "vite-plugin-externalize-deps": "^0.8.0",
+    "vitest": "^2.0.5"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  }
+}

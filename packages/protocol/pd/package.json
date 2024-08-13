@@ -1,0 +1,22 @@
+{
+  "name": "@p-lc/pd",
+  "version": "0.0.1",
+  "description": "Package declaration",
+  "homepage": "https://pluggable-low-code.github.io",
+  "bugs": {
+    "url": "https://github.com/pluggable-low-code/p-lc/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pluggable-low-code/p-lc"
+  },
+  "license": "MIT",
+  "author": "@brookshuihualee",
+  "sideEffects": false,
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "types": "src/index.d.ts",
+  "dependencies": {
+    "@p-lc/uidl": "workspace:^"
+  }
+}

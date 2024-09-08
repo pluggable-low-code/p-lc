@@ -103,12 +103,14 @@ export const editorPluginSaveStore: EditorRawPlugin<
   initEditor(ctx) {
     const { emitter, uidlStore } = ctx
     const saveStore = (ctx.saveStore = {} as typeof ctx.saveStore)
-    saveStore.savedUidl = null
+    saveStore.savedUidl = uidlStore.uidl
     definePropertyByGetter(saveStore, 'isSavable', () =>
       saveStore.checkSavable(),
     )
     // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-    saveStore.checkSavable = () => uidlStore.uidl !== saveStore.savedUidl
+    saveStore.checkSavable = () => {
+      return uidlStore.uidl !== saveStore.savedUidl
+    }
     saveStore.isSaving = false
     saveStore.save = action(() => {
       const { uidl } = uidlStore

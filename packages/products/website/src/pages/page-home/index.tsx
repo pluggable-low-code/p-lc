@@ -10,8 +10,6 @@ import { Nav } from '../../components/nav'
 import { URL_P_LC_GITHUB } from '../../constants'
 import { Card } from './card'
 
-// TODO: 处理保存问题
-
 /**
  * 首页
  */

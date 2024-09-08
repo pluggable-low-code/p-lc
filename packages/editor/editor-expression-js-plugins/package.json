@@ -1,6 +1,6 @@
 {
   "name": "@p-lc/editor-expression-js-plugins",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Editor JavaScript expression plugins",
   "homepage": "https://pluggable-low-code.github.io",
   "bugs": {

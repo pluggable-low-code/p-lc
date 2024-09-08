@@ -21,6 +21,7 @@ declare module '*.webp' {
 }
 
 declare module '*.mdx' {
-  const C: (props: unknown) => JSX.Element
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const C: (props: any) => JSX.Element
   export default C
 }

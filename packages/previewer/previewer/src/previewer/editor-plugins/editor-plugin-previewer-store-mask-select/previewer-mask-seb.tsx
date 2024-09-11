@@ -3,13 +3,13 @@ import { useEditor } from '@p-lc/editor'
 import type { StyleProps } from '@p-lc/react-shared'
 import { withStylePropsObserver } from '@p-lc/react-shared'
 import {
-  POSITION_TYPE_BOTTOM,
   VCVN_COLOR_HIGHLIGHT,
   addCssClass,
   createRectangleByHtmlElement,
   getRectangleHeight,
   getRectangleWidth,
   removeCssClass,
+  simpleAlignRectangle,
 } from '@p-lc/shared'
 import type { FC } from 'react'
 import { useEffect, useRef } from 'react'
@@ -17,16 +17,9 @@ import styled from 'styled-components'
 import { type editorPluginPreviewerStoreMaskSelect } from '.'
 
 /**
- * 位置类型：内部上
+ * 简单对齐类型，类集合
  */
-export const POSITION_TYPE_INNER_TOP = 'inner-top'
-
-/**
- * 位置类型：内部下
- */
-export const POSITION_TYPE_INNER_BOTTOM = 'inner-bottom'
-
-// TODO: top-left、top-right、bottom-left、bottom-right
+const satClsSet = new Set<string>()
 
 /**
  * 预览器遮罩选中的元素边界
@@ -48,29 +41,13 @@ export const PreviewerMaskSeb: FC<StyleProps> = withStylePropsObserver(() => {
     const rectContainer = createRectangleByHtmlElement(elContainer)
     const rectSeb = createRectangleByHtmlElement(elSeb)
     const rectTools = createRectangleByHtmlElement(elTools)
-    // 默认 top
-    removeCssClass(elTools, POSITION_TYPE_BOTTOM)
-    removeCssClass(elTools, POSITION_TYPE_INNER_TOP)
-    removeCssClass(elTools, POSITION_TYPE_INNER_BOTTOM)
-    const toolsHeight = getRectangleHeight(rectTools)
-    const rectSebSY = rectSeb.s.y
-    const rectSebEY = rectSeb.e.y
-    const rectContainerSY = rectContainer.s.y
-    const rectContainerEY = rectContainer.e.y
-    if (rectSebSY - toolsHeight < rectContainerSY) {
-      // 放弃 top
-      let cls
-      if (rectSebEY + toolsHeight > rectContainerEY) {
-        // 放弃 bottom
-        cls =
-          rectSebSY - rectContainerSY > rectContainerEY - rectSebEY
-            ? POSITION_TYPE_INNER_TOP
-            : POSITION_TYPE_INNER_BOTTOM
-      } else {
-        cls = POSITION_TYPE_BOTTOM
-      }
-      addCssClass(elTools, cls)
+    for (const cls of satClsSet) {
+      removeCssClass(elTools, cls)
     }
+    const sat = simpleAlignRectangle(rectContainer, rectSeb, rectTools)
+    const satCls = sat.join('-')
+    satClsSet.add(satCls)
+    addCssClass(elTools, satCls)
   }, [bounding])
   return (
     <InternalPreviewerMaskSebContainer
@@ -148,20 +125,38 @@ export const InternalPreviewerMaskSeTools = styled.div<{
   $sebWidth: number
 }>`
   position: absolute;
-  top: 0;
-  left: 0;
   width: max-content;
-  transform: translate3d(
-    ${
-      // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-      (props) => -props.$sebWidth
-    }px,
-    -100%,
-    0
-  );
   pointer-events: auto;
 
-  &.inner-top {
+  &.bl-tl {
+    top: 0;
+    left: 0;
+    transform: translate3d(
+      ${
+        // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+        (props) => -props.$sebWidth
+      }px,
+      -100%,
+      0
+    );
+  }
+
+  &.br-tr {
+    top: 0;
+    right: 0;
+    transform: translate3d(
+      ${
+        // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+        (props) => props.$sebWidth
+      }px,
+      -100%,
+      0
+    );
+  }
+
+  &.tl-tl {
+    top: 0;
+    left: 0;
     transform: translate3d(
       ${
         // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
@@ -175,9 +170,57 @@ export const InternalPreviewerMaskSeTools = styled.div<{
     );
   }
 
-  &.bottom {
-    top: initial;
+  &.tr-tr {
+    top: 0;
+    right: 0;
+    transform: translate3d(
+      ${
+        // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+        (props) => props.$sebWidth
+      }px,
+      ${
+        // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+        (props) => -props.$sebWidth
+      }px,
+      0
+    );
+  }
+
+  &.bl-bl {
     bottom: 0;
+    left: 0;
+    transform: translate3d(
+      ${
+        // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+        (props) => -props.$sebWidth
+      }px,
+      ${
+        // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+        (props) => props.$sebWidth
+      }px,
+      0
+    );
+  }
+
+  &.br-br {
+    right: 0;
+    bottom: 0;
+    transform: translate3d(
+      ${
+        // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+        (props) => props.$sebWidth
+      }px,
+      ${
+        // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+        (props) => props.$sebWidth
+      }px,
+      0
+    );
+  }
+
+  &.tl-bl {
+    bottom: 0;
+    left: 0;
     transform: translate3d(
       ${
         // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
@@ -188,18 +231,15 @@ export const InternalPreviewerMaskSeTools = styled.div<{
     );
   }
 
-  &.inner-bottom {
-    top: initial;
+  &.tr-br {
+    right: 0;
     bottom: 0;
     transform: translate3d(
       ${
         // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-        (props) => -props.$sebWidth
-      }px,
-      ${
-        // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
         (props) => props.$sebWidth
       }px,
+      100%,
       0
     );
   }

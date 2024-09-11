@@ -33,3 +33,5 @@ export const editorPluginPreviewerStoreSelect: EditorPlugin<
     editorExpose.selectElement = elementStore.selectElement
   },
 }
+
+// TODO: hover 高亮元素边框

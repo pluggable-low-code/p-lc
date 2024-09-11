@@ -1,6 +1,6 @@
 {
   "name": "@p-lc/vue-component-library-shared",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Shared code of Vue component library",
   "homepage": "https://pluggable-low-code.github.io",
   "bugs": {

@@ -2,7 +2,11 @@ import type { ContextMenuElement } from '@p-lc/editor'
 import { CONTEXT_MENU_ENTITY_TYPE_ELEMENT } from '@p-lc/editor'
 import type { RuntimePlugin } from '@p-lc/runtime'
 import type { Point } from '@p-lc/shared'
-import { createPointByEventClient } from '@p-lc/shared'
+import {
+  createPointByEventClient,
+  docAddEventListener,
+  docRemoveEventListener,
+} from '@p-lc/shared'
 import { isNil } from 'lodash-uni'
 import type { Promisable } from 'type-fest'
 import { type runtimePluginElementDom } from './runtime-plugin-element-dom'
@@ -41,9 +45,8 @@ export const runtimePluginPreviewerContextMenu: RuntimePlugin<
   id: 'previewer-context-menu',
   initRuntime(ctx) {
     // window 可能会停止冒泡阻止点击
-    document.addEventListener('contextmenu', handleDocContextMenu, true)
-    return () =>
-      document.removeEventListener('click', handleDocContextMenu, true)
+    docAddEventListener('contextmenu', handleDocContextMenu, true)
+    return () => docRemoveEventListener('click', handleDocContextMenu, true)
 
     function handleDocContextMenu(ev: MouseEvent): void {
       const { editorCall } = ctx

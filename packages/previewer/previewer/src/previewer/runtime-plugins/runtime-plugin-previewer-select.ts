@@ -1,4 +1,5 @@
 import type { RuntimePlugin } from '@p-lc/runtime'
+import { docAddEventListener, docRemoveEventListener } from '@p-lc/shared'
 import { isNil } from 'lodash-uni'
 import { type runtimePluginElementDom } from './runtime-plugin-element-dom'
 
@@ -35,8 +36,8 @@ export const runtimePluginPreviewerSelect: RuntimePlugin<
   id: 'previewer-select',
   initRuntime(ctx) {
     // window 可能会停止冒泡阻止点击
-    document.addEventListener('click', handleDocClick, true)
-    return () => document.removeEventListener('click', handleDocClick, true)
+    docAddEventListener('click', handleDocClick, true)
+    return () => docRemoveEventListener('click', handleDocClick, true)
 
     function handleDocClick(ev: MouseEvent): void {
       const { editorCall } = ctx

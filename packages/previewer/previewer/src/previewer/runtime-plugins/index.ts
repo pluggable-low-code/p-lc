@@ -8,6 +8,7 @@ import { runtimePluginI18nStrings } from './runtime-plugin-i18n-strings'
 import { runtimePluginPreviewer } from './runtime-plugin-previewer'
 import { runtimePluginPreviewerContextMenu } from './runtime-plugin-previewer-context-menu'
 import { runtimePluginPreviewerHotUpdateUidl } from './runtime-plugin-previewer-hot-update-uidl'
+import { runtimePluginPreviewerHover } from './runtime-plugin-previewer-hover'
 import { runtimePluginPreviewerIdElement } from './runtime-plugin-previewer-id-element'
 import { runtimePluginPreviewerPdForPreview } from './runtime-plugin-previewer-pd-for-preview'
 import { runtimePluginPreviewerPosition } from './runtime-plugin-previewer-position'
@@ -21,6 +22,7 @@ export * from './runtime-plugin-i18n-strings'
 export * from './runtime-plugin-previewer'
 export * from './runtime-plugin-previewer-context-menu'
 export * from './runtime-plugin-previewer-hot-update-uidl'
+export * from './runtime-plugin-previewer-hover'
 export * from './runtime-plugin-previewer-id-element'
 export * from './runtime-plugin-previewer-pd-for-preview'
 export * from './runtime-plugin-previewer-position'
@@ -40,6 +42,7 @@ export const internalRuntimePreviewerPlugins = [
   runtimePluginElementDom,
   runtimePluginPreviewerContextMenu,
   runtimePluginPreviewerHotUpdateUidl,
+  runtimePluginPreviewerHover,
   runtimePluginPreviewerIdElement,
   runtimePluginPreviewerPdForPreview,
   runtimePluginPreviewerPosition,

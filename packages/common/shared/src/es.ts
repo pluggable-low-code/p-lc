@@ -1,30 +1,32 @@
 import type { AnyObject } from '@mobo-ts/shared'
 import { computed, makeObservable } from 'mobx'
 
+const Obj = Object
+
 /**
  * shorthand of Object.create
  */
-export const create = Object.create
+export const create = Obj.create
 
 /**
  * shorthand of Object.is
  */
-export const is = Object.is
+export const is = Obj.is
 
 /**
  * shorthand of Object.defineProperty
  */
-export const defineProperty = Object.defineProperty
+export const defineProperty = Obj.defineProperty
 
 /**
  * shorthand of Object.getOwnPropertyNames
  */
-export const getOwnPropertyNames = Object.getOwnPropertyNames
+export const getOwnPropertyNames = Obj.getOwnPropertyNames
 
 /**
  * shorthand of Object.getOwnPropertyDescriptor
  */
-export const getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor
+export const getOwnPropertyDescriptor = Obj.getOwnPropertyDescriptor
 
 /**
  * 定义可配置、可枚举的属性

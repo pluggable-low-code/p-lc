@@ -1876,6 +1876,9 @@ importers:
       '@p-lc/shared':
         specifier: workspace:^
         version: link:../../common/shared
+      '@p-lc/uidl':
+        specifier: workspace:^
+        version: link:../uidl
       '@p-lc/uidl-ext-i18n':
         specifier: workspace:^
         version: link:../uidl-ext-i18n
@@ -1886,6 +1889,9 @@ importers:
         specifier: ^1.2.0
         version: 1.2.0
     devDependencies:
+      jsdom:
+        specifier: ^24.1.1
+        version: 24.1.1
       vite:
         specifier: ^5.4.0
         version: 5.4.0(@types/node@22.1.0)
@@ -2023,6 +2029,9 @@ importers:
         specifier: ^4.23.0
         version: 4.23.0
     devDependencies:
+      jsdom:
+        specifier: ^24.1.1
+        version: 24.1.1
       vite:
         specifier: ^5.4.0
         version: 5.4.0(@types/node@22.1.0)
@@ -2151,6 +2160,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.3.1
         version: 4.3.1(vite@5.4.0(@types/node@22.1.0))
+      jsdom:
+        specifier: ^24.1.1
+        version: 24.1.1
       mobx:
         specifier: ^6.13.1
         version: 6.13.1
@@ -2203,6 +2215,9 @@ importers:
         specifier: ^4.23.0
         version: 4.23.0
     devDependencies:
+      jsdom:
+        specifier: ^24.1.1
+        version: 24.1.1
       vite:
         specifier: ^5.4.0
         version: 5.4.0(@types/node@22.1.0)
@@ -2806,6 +2821,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.3.1
         version: 4.3.1(vite@5.4.0(@types/node@22.1.0))
+      jsdom:
+        specifier: ^24.1.1
+        version: 24.1.1
       react:
         specifier: ^18.3.1
         version: 18.3.1

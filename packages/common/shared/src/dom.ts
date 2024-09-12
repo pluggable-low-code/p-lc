@@ -2,7 +2,6 @@ import type { Disposer } from '@mobo-ts/shared'
 import type { Point } from './graph'
 import { createPoint, mulPoint, pointToArray } from './graph'
 import { sleepFrame } from './time'
-import type { VoidFn } from './types'
 
 /**
  * a 标签打开新页面属性
@@ -183,16 +182,4 @@ export function startContinuousScroll<T extends Scrollable>(
     }
   })()
   return scroller
-}
-
-/**
- * 停止冒泡并阻止默认行为
- * @param ev 事件
- */
-export function stopPropagationAndPreventDefault(ev: {
-  stopPropagation: VoidFn
-  preventDefault: VoidFn
-}): void {
-  ev.stopPropagation()
-  ev.preventDefault()
 }

@@ -90,7 +90,7 @@ export const InternalPreviewerMaskSebContainer = styled.div<{
     (props) => -props.$sebWidth
   }px;
   overflow: hidden;
-  z-index: 20;
+  z-index: 30;
 `
 
 /**

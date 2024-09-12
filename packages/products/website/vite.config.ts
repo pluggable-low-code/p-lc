@@ -6,8 +6,6 @@ import { analyzer } from 'vite-bundle-analyzer'
 import checker from 'vite-plugin-checker'
 import dts from 'vite-plugin-dts'
 
-void mdx
-
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [

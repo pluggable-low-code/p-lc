@@ -6,7 +6,11 @@ import type {
   EditorDefaultPropertiesExtHktPlugin,
   EditorPlugin,
 } from '@p-lc/editor'
-import type { Disposer } from '@p-lc/shared'
+import {
+  winAddEventListener,
+  winRemoveEventListener,
+  type Disposer,
+} from '@p-lc/shared'
 import { isArray, once, sortBy, values } from 'lodash-uni'
 import type { ShortcutToolbarEditorPlugin } from '../types'
 
@@ -107,12 +111,12 @@ export const editorPluginShortcutToolbarStore: EditorPlugin<$EditorPluginShortcu
           ({ index = Infinity }) => index,
         )
       })
-      addEventListener('keydown', handleWinKeyDown)
-      addEventListener('keyup', handleWinKeyUp)
+      winAddEventListener('keydown', handleWinKeyDown)
+      winAddEventListener('keyup', handleWinKeyUp)
       const actionDisposerMap = new WeakMap<Shortcut, Disposer>()
       return () => {
-        removeEventListener('keydown', handleWinKeyDown)
-        removeEventListener('keyup', handleWinKeyUp)
+        winRemoveEventListener('keydown', handleWinKeyDown)
+        winRemoveEventListener('keyup', handleWinKeyUp)
       }
 
       function handleWinKeyDown(ev: KeyboardEvent): void {

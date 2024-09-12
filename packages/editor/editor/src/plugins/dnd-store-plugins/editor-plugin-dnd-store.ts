@@ -9,6 +9,8 @@ import {
   createPointByEventClient,
   distanceSquare,
   getClosestHtmlElementBy,
+  winAddEventListener,
+  winRemoveEventListener,
   zeroPoint,
 } from '@p-lc/shared'
 import { isNull, now } from 'lodash-uni'
@@ -430,13 +432,13 @@ export const editorPluginDndStore: EditorRawPlugin<
     }
 
     function addDragEventListeners(): void {
-      addEventListener('mousemove', handleMouseMove)
-      addEventListener('mouseup', handleMouseUp)
+      winAddEventListener('mousemove', handleMouseMove)
+      winAddEventListener('mouseup', handleMouseUp)
     }
 
     function removeDragEventListeners(): void {
-      removeEventListener('mousemove', handleMouseMove)
-      removeEventListener('mouseup', handleMouseUp)
+      winRemoveEventListener('mousemove', handleMouseMove)
+      winRemoveEventListener('mouseup', handleMouseUp)
     }
 
     function handleWinClickCapture(ev: MouseEvent): void {
@@ -448,11 +450,11 @@ export const editorPluginDndStore: EditorRawPlugin<
     }
 
     function addClickEventListener(): void {
-      addEventListener('click', handleWinClickCapture, true)
+      winAddEventListener('click', handleWinClickCapture, true)
     }
 
     function removeClickEventListener(): void {
-      removeEventListener('click', handleWinClickCapture, true)
+      winRemoveEventListener('click', handleWinClickCapture, true)
     }
   },
 }

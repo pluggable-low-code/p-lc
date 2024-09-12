@@ -1,7 +1,10 @@
-import { useLatestFn } from '@p-lc/react-shared'
+import { useLatestFn, type StyleProps } from '@p-lc/react-shared'
 import { Menu, type MenuProps } from 'antd'
 import { memo, useMemo, type FC, type ReactNode } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
+import SyntaxHighlighter, {
+  type SyntaxHighlighterProps,
+} from 'react-syntax-highlighter'
 import styled from 'styled-components'
 import { Nav } from './nav'
 
@@ -112,8 +115,6 @@ export const InternalDocsLayoutContainer = styled.div`
     overflow: auto;
   }
 `
-
-// TODO: 高亮文档里的代码
 
 /**
  * 内部：Markdown 包装
@@ -259,3 +260,27 @@ export const InternalMarkdownWrapper = styled.div`
     padding-inline-end: calc(1em + 1ex);
   }
 `
+
+/**
+ * MDX 里的 code 属性
+ */
+export interface MdxCodeProps
+  extends SyntaxHighlighterProps,
+    Omit<StyleProps, 'style'> {}
+
+/**
+ * MDX 里的 code
+ */
+export const MdxCode: FC<MdxCodeProps> = memo(({ className, ...props }) => {
+  const match = /language-(\w+)/.exec(className || '')
+  return match ? (
+    <SyntaxHighlighter language={match[1]} PreTag="div" {...props} />
+  ) : (
+    <code className={className} {...props} />
+  )
+})
+
+/**
+ * MDX 里的组件
+ */
+export const mdxComponents = { code: MdxCode }

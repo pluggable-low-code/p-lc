@@ -20,8 +20,13 @@ declare module '*.webp' {
   export default url
 }
 
-declare module '*.mdx' {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const C: (props: any) => JSX.Element
-  export default C
+// declare module '*.mdx' {
+//   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//   const C: (props: any) => JSX.Element
+//   export default C
+// }
+
+declare module '*?raw' {
+  const txt: string
+  export default txt
 }

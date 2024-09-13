@@ -1,5 +1,15 @@
 # @p-lc/runtime-emitter-plugins
 
+## 0.0.4
+
+### Patch Changes
+
+- Highlight the hovering element's bounding
+- Updated dependencies
+  - @p-lc/shared@0.0.4
+  - @p-lc/uidl-ext-data@0.0.4
+  - @p-lc/runtime@0.0.4
+
 ## 0.0.3
 
 ### Patch Changes

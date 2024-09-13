@@ -1,6 +1,6 @@
 {
   "name": "@p-lc/uidl",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "User interface definition language",
   "homepage": "https://pluggable-low-code.github.io",
   "bugs": {

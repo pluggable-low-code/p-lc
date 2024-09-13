@@ -1,6 +1,6 @@
 {
   "name": "@p-lc/runtime-i18n-plugins",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Runtime i18n plugins",
   "homepage": "https://pluggable-low-code.github.io",
   "bugs": {

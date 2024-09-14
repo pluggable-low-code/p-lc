@@ -1,6 +1,7 @@
 import { useLatestFn } from '@p-lc/react-shared'
+import MarkdownPreview from '@uiw/react-markdown-preview'
 import { Menu, type MenuProps } from 'antd'
-import { memo, useMemo, type FC, type ReactNode } from 'react'
+import { memo, useMemo, type ComponentProps, type FC } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { Nav } from './nav'
@@ -9,7 +10,10 @@ import { Nav } from './nav'
  * 文档布局属性
  */
 export interface DocsLayoutProps {
-  children: ReactNode
+  /**
+   * Markdown 内容
+   */
+  md: string
 }
 
 /**
@@ -52,9 +56,28 @@ const menuItems: Required<MenuProps>['items'] = [
 const menuDefaultOpenKeys = ['get-started', 'plugin']
 
 /**
+ * Markdown 预览属性
+ */
+const markdownPreviewProps: Partial<ComponentProps<typeof MarkdownPreview>> = {
+  rehypeRewrite(node, index, parent) {
+    // Disable Header links
+    void index
+    if (
+      (node as typeof node & { tagName?: string }).tagName === 'a' &&
+      parent &&
+      /^h(1|2|3|4|5|6)/.test(
+        (parent as typeof parent & { tagName: string }).tagName,
+      )
+    ) {
+      parent.children = parent.children.slice(1)
+    }
+  },
+}
+
+/**
  * 文档布局
  */
-export const DocsLayout: FC<DocsLayoutProps> = memo(({ children }) => {
+export const DocsLayout: FC<DocsLayoutProps> = memo(({ md }) => {
   const { pathname } = useLocation()
   const navigate = useNavigate()
   const selectedKeys = useMemo(() => [pathname], [pathname])
@@ -76,7 +99,9 @@ export const DocsLayout: FC<DocsLayoutProps> = memo(({ children }) => {
             items={menuItems}
           />
         </div>
-        <div className="content">{children}</div>
+        <div className="content">
+          <MarkdownPreview {...markdownPreviewProps} source={md} />
+        </div>
       </div>
     </InternalDocsLayoutContainer>
   )
@@ -106,7 +131,7 @@ export const InternalDocsLayoutContainer = styled.div`
 
   .content {
     flex: auto;
-    padding: 0 32px;
+    padding: 32px;
     overflow: auto;
   }
 `

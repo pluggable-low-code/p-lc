@@ -1657,18 +1657,6 @@ importers:
       '@fastify/static':
         specifier: ^7.0.4
         version: 7.0.4
-      '@p-lc/lc-types-suite':
-        specifier: workspace:^
-        version: link:../../suites/lc-types-suite
-      '@p-lc/lc-types-ui':
-        specifier: workspace:^
-        version: link:../../component-libraries/lc-types-ui
-      '@p-lc/pd':
-        specifier: workspace:^
-        version: link:../../protocol/pd
-      '@p-lc/shared':
-        specifier: workspace:^
-        version: link:../../common/shared
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -1691,6 +1679,18 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@p-lc/lc-types-suite':
+        specifier: workspace:^
+        version: link:../../suites/lc-types-suite
+      '@p-lc/lc-types-ui':
+        specifier: workspace:^
+        version: link:../../component-libraries/lc-types-ui
+      '@p-lc/pd':
+        specifier: workspace:^
+        version: link:../../protocol/pd
+      '@p-lc/shared':
+        specifier: workspace:^
+        version: link:../../common/shared
       '@vitejs/plugin-react':
         specifier: ^4.3.1
         version: 4.3.1(vite@5.4.0(@types/node@22.1.0))

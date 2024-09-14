@@ -24,10 +24,6 @@
   },
   "dependencies": {
     "@fastify/static": "^7.0.4",
-    "@p-lc/lc-types-suite": "workspace:^",
-    "@p-lc/lc-types-ui": "workspace:^",
-    "@p-lc/pd": "workspace:^",
-    "@p-lc/shared": "workspace:^",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "fastify": "^4.28.1",
@@ -37,6 +33,10 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@p-lc/lc-types-suite": "workspace:^",
+    "@p-lc/lc-types-ui": "workspace:^",
+    "@p-lc/pd": "workspace:^",
+    "@p-lc/shared": "workspace:^",
     "@vitejs/plugin-react": "^4.3.1",
     "vite": "^5.4.0",
     "vite-bundle-analyzer": "^0.10.3",

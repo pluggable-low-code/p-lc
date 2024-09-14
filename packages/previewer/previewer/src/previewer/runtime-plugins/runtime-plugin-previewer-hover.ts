@@ -1,6 +1,5 @@
 import type { RuntimePlugin } from '@p-lc/runtime'
 import { winAddEventListener, winRemoveEventListener } from '@p-lc/shared'
-import { isNil } from 'lodash-uni'
 import { type runtimePluginElementDom } from './runtime-plugin-element-dom'
 
 /**
@@ -36,13 +35,15 @@ export const runtimePluginPreviewerHover: RuntimePlugin<
   id: 'previewer-hover',
   initRuntime(ctx) {
     winAddEventListener('mousemove', handleMouseMove, true)
+    let lastId: string | null | undefined
     return () => winRemoveEventListener('mousemove', handleMouseMove, true)
 
     function handleMouseMove(ev: MouseEvent): void {
       const { editorCall } = ctx
-      const elementId = ctx.getFirstElementInfoByChildNode(ev.target)?.[0]
-      if (isNil(elementId)) return
-      editorCall.hoverElement(elementId)
+      const elementId =
+        ctx.getFirstElementInfoByChildNode(ev.target)?.[0] || null
+      if (lastId === elementId) return
+      editorCall.hoverElement((lastId = elementId))
     }
   },
 }

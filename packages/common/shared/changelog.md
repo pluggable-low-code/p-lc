@@ -1,5 +1,13 @@
 # @p-lc/shared
 
+## 0.0.5
+
+### Patch Changes
+
+- Fix lct vite config
+- Updated dependencies
+  - @p-lc/pd@0.0.5
+
 ## 0.0.4
 
 ### Patch Changes

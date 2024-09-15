@@ -1,5 +1,11 @@
 # @p-lc/uidl
 
+## 0.0.5
+
+### Patch Changes
+
+- Fix lct vite config
+
 ## 0.0.4
 
 ### Patch Changes

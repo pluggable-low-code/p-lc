@@ -1,5 +1,14 @@
 # @p-lc/scratch-demo
 
+## 0.0.5
+
+### Patch Changes
+
+- Fix lct vite config
+- Updated dependencies
+  - @p-lc/shared@0.0.5
+  - @p-lc/scratch-suite@0.0.5
+
 ## 0.0.4
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @p-lc/antd-demo
 
+## 0.0.5
+
+### Patch Changes
+
+- Fix lct vite config
+- Updated dependencies
+  - @p-lc/shared@0.0.5
+  - @lc-types/antd@0.0.5
+  - @p-lc/pd@0.0.5
+  - @p-lc/antd-suite@0.0.5
+
 ## 0.0.4
 
 ### Patch Changes

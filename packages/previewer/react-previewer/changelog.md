@@ -1,5 +1,23 @@
 # @p-lc/react-previewer
 
+## 0.0.5
+
+### Patch Changes
+
+- Fix lct vite config
+- Updated dependencies
+  - @p-lc/react-component-library-shared@0.0.5
+  - @p-lc/react-shared@0.0.5
+  - @p-lc/shared@0.0.5
+  - @p-lc/editor@0.0.5
+  - @p-lc/previewer@0.0.5
+  - @p-lc/uidl@0.0.5
+  - @p-lc/uidl-utils@0.0.5
+  - @p-lc/react-runtime@0.0.5
+  - @p-lc/runtime@0.0.5
+  - @p-lc/runtime-emitter-plugins@0.0.5
+  - @p-lc/runtime-mobx-plugins@0.0.5
+
 ## 0.0.4
 
 ### Patch Changes

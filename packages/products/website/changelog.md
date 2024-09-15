@@ -1,5 +1,21 @@
 # @p-lc/website
 
+## 0.0.5
+
+### Patch Changes
+
+- Fix lct vite config
+- Updated dependencies
+  - @p-lc/react-shared@0.0.5
+  - @p-lc/shared@0.0.5
+  - @lc-types/antd@0.0.5
+  - @p-lc/lc-types-ui@0.0.5
+  - @p-lc/pd@0.0.5
+  - @p-lc/uidl@0.0.5
+  - @p-lc/antd-suite@0.0.5
+  - @p-lc/lc-types-suite@0.0.5
+  - @p-lc/react-and-vue-suite@0.0.5
+
 ## 0.0.4
 
 ### Patch Changes

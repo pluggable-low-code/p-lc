@@ -1,5 +1,16 @@
 # @p-lc/antd-demo
 
+## 0.0.6
+
+### Patch Changes
+
+- Amend the lc types implements
+- Updated dependencies
+  - @p-lc/shared@0.0.6
+  - @lc-types/antd@0.0.6
+  - @p-lc/pd@0.0.6
+  - @p-lc/antd-suite@0.0.6
+
 ## 0.0.5
 
 ### Patch Changes

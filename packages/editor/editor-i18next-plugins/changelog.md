@@ -1,5 +1,16 @@
 # @p-lc/editor-i18next-plugins
 
+## 0.0.6
+
+### Patch Changes
+
+- Amend the lc types implements
+- Updated dependencies
+  - @p-lc/shared@0.0.6
+  - @p-lc/editor@0.0.6
+  - @p-lc/pd@0.0.6
+  - @p-lc/pd-utils@0.0.6
+
 ## 0.0.5
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @p-lc/pd
 
+## 0.0.6
+
+### Patch Changes
+
+- Amend the lc types implements
+- Updated dependencies
+  - @p-lc/uidl@0.0.6
+
 ## 0.0.5
 
 ### Patch Changes

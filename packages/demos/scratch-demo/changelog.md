@@ -1,5 +1,14 @@
 # @p-lc/scratch-demo
 
+## 0.0.6
+
+### Patch Changes
+
+- Amend the lc types implements
+- Updated dependencies
+  - @p-lc/shared@0.0.6
+  - @p-lc/scratch-suite@0.0.6
+
 ## 0.0.5
 
 ### Patch Changes

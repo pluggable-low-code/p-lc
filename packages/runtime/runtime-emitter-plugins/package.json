@@ -1,6 +1,6 @@
 {
   "name": "@p-lc/runtime-emitter-plugins",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Runtime emitter plugins",
   "homepage": "https://pluggable-low-code.github.io",
   "bugs": {

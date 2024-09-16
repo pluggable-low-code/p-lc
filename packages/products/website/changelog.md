@@ -1,5 +1,21 @@
 # @p-lc/website
 
+## 0.0.6
+
+### Patch Changes
+
+- Amend the lc types implements
+- Updated dependencies
+  - @p-lc/react-shared@0.0.6
+  - @p-lc/shared@0.0.6
+  - @lc-types/antd@0.0.6
+  - @p-lc/lc-types-ui@0.0.6
+  - @p-lc/pd@0.0.6
+  - @p-lc/uidl@0.0.6
+  - @p-lc/antd-suite@0.0.6
+  - @p-lc/lc-types-suite@0.0.6
+  - @p-lc/react-and-vue-suite@0.0.6
+
 ## 0.0.5
 
 ### Patch Changes

@@ -1,5 +1,22 @@
 # @p-lc/scratch-suite
 
+## 0.0.6
+
+### Patch Changes
+
+- Amend the lc types implements
+- Updated dependencies
+  - @p-lc/react-shared@0.0.6
+  - @p-lc/shared@0.0.6
+  - @p-lc/editor@0.0.6
+  - @p-lc/editor-classical-layout-plugins@0.0.6
+  - @p-lc/editor-i18next-plugins@0.0.6
+  - @p-lc/editor-monaco-plugins@0.0.6
+  - @p-lc/uidl@0.0.6
+  - @p-lc/uidl-utils@0.0.6
+  - @p-lc/react-runtime@0.0.6
+  - @p-lc/runtime@0.0.6
+
 ## 0.0.5
 
 ### Patch Changes

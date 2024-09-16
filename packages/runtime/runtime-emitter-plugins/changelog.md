@@ -1,5 +1,15 @@
 # @p-lc/runtime-emitter-plugins
 
+## 0.0.6
+
+### Patch Changes
+
+- Amend the lc types implements
+- Updated dependencies
+  - @p-lc/shared@0.0.6
+  - @p-lc/uidl-ext-data@0.0.6
+  - @p-lc/runtime@0.0.6
+
 ## 0.0.5
 
 ### Patch Changes

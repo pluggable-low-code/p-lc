@@ -21,9 +21,9 @@ import {
  */
 export function transformUidlByImplementsFor(uidl: LcTypesUidl): LcTypesUidl {
   if (!uidl.implements?.for) return uidl
-  const slot = ensureAttrCategory(uidl, 'render', {
-    [EN_US]: 'Render',
-    [ZH_CN]: '渲染',
+  const slot = ensureAttrCategory(uidl, 'advanced', {
+    [EN_US]: 'Advanced',
+    [ZH_CN]: '高级',
   })
   slot.value.push(...generateImplementsForElements(uidl))
   return uidl

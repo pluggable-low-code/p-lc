@@ -24,8 +24,8 @@ import {
  */
 export function transformUidlByImplementsStyle(uidl: LcTypesUidl): LcTypesUidl {
   if (!uidl.implements?.style) return uidl
-  const slot = ensureAttrCategory(uidl, 'style', {
-    [EN_US]: 'Style',
+  const slot = ensureAttrCategory(uidl, 'styles', {
+    [EN_US]: 'Styles',
     [ZH_CN]: '样式',
   })
   slot.value.push(...generateImplementsStyleElements(uidl))

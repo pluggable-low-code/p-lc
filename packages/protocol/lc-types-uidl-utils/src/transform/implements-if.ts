@@ -19,9 +19,9 @@ import {
  */
 export function transformUidlByImplementsIf(uidl: LcTypesUidl): LcTypesUidl {
   if (!uidl.implements?.if) return uidl
-  const slot = ensureAttrCategory(uidl, 'render', {
-    [EN_US]: 'Render',
-    [ZH_CN]: '渲染',
+  const slot = ensureAttrCategory(uidl, 'advanced', {
+    [EN_US]: 'Advanced',
+    [ZH_CN]: '高级',
   })
   slot.value.push(...generateImplementsIfElements(uidl))
   return uidl

@@ -75,8 +75,8 @@ export function simpleAlignRectangle(
       alignPointBottom(isRight),
     ] as SimpleAlignType
   }
-  if (rectTargetSY - rectContainerSY >= rectContainerEY - rectTargetEY) {
-    // 内部 & 顶部
+  if (rectTargetSY - rectContainerSY > rectContainerEY - rectTargetEY) {
+    // 内部 & 顶部，底部优先
     const t = alignPointTop(isRight)
     return [t, t] as SimpleAlignType
   }

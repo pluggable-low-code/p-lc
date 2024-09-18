@@ -22,6 +22,11 @@ export const AntdPopupContainerGlobalStyle = createGlobalStyle`
     }
   }
 
+  .lc-previewer {
+    .ant-float-btn {
+      position: absolute;
+    }
+  }
 `
 
 /**

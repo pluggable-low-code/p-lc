@@ -161,6 +161,7 @@ export const editorPluginElementStoreFind: EditorRawPlugin<
         elementName = `${componentName} ${i++}`
       }
       componentNameIndexMap.set(componentName, i)
+      elementNameSet.add(elementName)
       return elementName
     }
     // eslint-disable-next-line @typescript-eslint/explicit-function-return-type

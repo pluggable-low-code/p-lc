@@ -23,7 +23,11 @@ export const AntdPopupContainerGlobalStyle = createGlobalStyle`
   }
 
   .lc-previewer {
-    .ant-float-btn {
+    .ant-float-btn-group {
+      position: absolute;
+    }
+
+    :not(.ant-float-btn-group):not(.ant-float-btn-group-wrap) > .ant-float-btn {
       position: absolute;
     }
   }

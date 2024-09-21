@@ -3,8 +3,7 @@ import { useEditor } from '@p-lc/editor'
 import type { StyleProps } from '@p-lc/react-shared'
 import {
   SortableTabs,
-  typographyEllipsisWithTooltip,
-  TypographyText,
+  TypographyTextTip,
   withStylePropsObserver,
 } from '@p-lc/react-shared'
 import { type Tabs } from 'antd'
@@ -32,11 +31,7 @@ export const CdTabs: FC<StyleProps> = withStylePropsObserver(() => {
   const items = useMemo(() => {
     return components.map(({ type, name }) => ({
       key: type,
-      label: (
-        <TypographyText ellipsis={typographyEllipsisWithTooltip}>
-          {tEditingText(name)}
-        </TypographyText>
-      ),
+      label: <TypographyTextTip>{tEditingText(name)}</TypographyTextTip>,
       closable: components.length > 1,
     })) satisfies NonNullable<ComponentProps<typeof Tabs>['items']>
   }, [components, tEditingText])

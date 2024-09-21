@@ -2,8 +2,7 @@ import { useEditor } from '@p-lc/editor'
 import type { StyleProps } from '@p-lc/react-shared'
 import {
   RadioGroup,
-  typographyEllipsisWithTooltip,
-  TypographyText,
+  TypographyTextTip,
   useLatestFn,
   withStylePropsObserver,
 } from '@p-lc/react-shared'
@@ -54,17 +53,12 @@ export const I18nBinderBody: FC<I18nBinderBodyProps> = withStylePropsObserver(
           {keys.map((key) => (
             <Radio key={key} value={key}>
               <div className="lc-key">
-                <TypographyText ellipsis={typographyEllipsisWithTooltip}>
-                  {key}
-                </TypographyText>
+                <TypographyTextTip>{key}</TypographyTextTip>
               </div>
               <div className="lc-text">
-                <TypographyText
-                  type="secondary"
-                  ellipsis={typographyEllipsisWithTooltip}
-                >
+                <TypographyTextTip type="secondary">
                   {getText(language, key)}
-                </TypographyText>
+                </TypographyTextTip>
               </div>
             </Radio>
           ))}

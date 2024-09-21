@@ -3,8 +3,7 @@ import {
   IconBtn,
   type StyleProps,
   TextArea,
-  typographyEllipsisWithTooltip,
-  TypographyText,
+  TypographyTextTip,
   useLatestFn,
   withStylePropsObserver,
 } from '@p-lc/react-shared'
@@ -62,12 +61,7 @@ export const I18nEditItem: FC<I18nEditItemProps> = withStylePropsObserver(
     return (
       <InternalI18nEditItemContainer className="lc-i18n-edit-item" ref={refEl}>
         <div className="lc-title">
-          <TypographyText
-            ellipsis={typographyEllipsisWithTooltip}
-            className="lc-key"
-          >
-            {key}
-          </TypographyText>
+          <TypographyTextTip className="lc-key">{key}</TypographyTextTip>
           <Tooltip title={t(I18N_KEY_I18N_EDIT_EDIT_KEY)}>
             <IconBtn onClick={handleEditBtnClick}>
               <EditPencil />

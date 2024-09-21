@@ -7,7 +7,7 @@ import type { Cd } from '@p-lc/pd'
 import type { StyleProps } from '@p-lc/react-shared'
 import {
   ComponentIcon,
-  TypographyText,
+  TypographyTextTip,
   useLatestFn,
   withStylePropsMemo,
 } from '@p-lc/react-shared'
@@ -61,9 +61,7 @@ export const ComponentLibraryComponent: FC<ComponentLibraryComponentProps> =
         {...draggableProps}
       >
         {icon && <ComponentIcon icon={icon} />}
-        <TypographyText className="lc-name" ellipsis>
-          {name}
-        </TypographyText>
+        <TypographyTextTip className="lc-name">{name}</TypographyTextTip>
       </InternalComponentLibraryComponentContainer>
     )
   })

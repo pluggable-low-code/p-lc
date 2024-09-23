@@ -32,7 +32,7 @@
     "@p-lc/uidl": "workspace:^",
     "@p-lc/uidl-ext-js": "workspace:^",
     "@p-lc/uidl-utils": "workspace:^",
-    "antd": "^5.20.0",
+    "antd": "^5.21.0",
     "iconoir-react": "^7.8.0",
     "lodash-uni": "^1.2.0",
     "mobx": "^6.13.1",

@@ -26,7 +26,7 @@
   "dependencies": {
     "@p-lc/react-shared": "workspace:^",
     "@p-lc/shared": "workspace:^",
-    "antd": "^5.20.0",
+    "antd": "^5.21.0",
     "lodash-uni": "^1.2.0",
     "react-use": "^17.5.1",
     "styled-components": "^6.1.12"

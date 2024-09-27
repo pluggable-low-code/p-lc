@@ -1,6 +1,6 @@
 {
   "name": "@p-lc/lc-types-demo",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "private": true,
   "scripts": {
     "analyze": "ANALYZE=1 vite build",

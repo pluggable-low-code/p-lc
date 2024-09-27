@@ -1,5 +1,16 @@
 # @p-lc/editor-i18next-plugins
 
+## 0.0.8
+
+### Patch Changes
+
+- Fix VirtualList height
+- Updated dependencies
+  - @p-lc/shared@0.0.8
+  - @p-lc/editor@0.0.8
+  - @p-lc/pd@0.0.8
+  - @p-lc/pd-utils@0.0.8
+
 ## 0.0.7
 
 ### Patch Changes

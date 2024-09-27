@@ -1,5 +1,18 @@
 # @p-lc/react-runtime
 
+## 0.0.8
+
+### Patch Changes
+
+- Fix VirtualList height
+- Updated dependencies
+  - @p-lc/react-component-library-shared@0.0.8
+  - @p-lc/react-shared@0.0.8
+  - @p-lc/shared@0.0.8
+  - @p-lc/uidl@0.0.8
+  - @p-lc/uidl-utils@0.0.8
+  - @p-lc/runtime@0.0.8
+
 ## 0.0.7
 
 ### Patch Changes

@@ -1,5 +1,21 @@
 # @p-lc/editor-i18n-edit-store-plugins
 
+## 0.0.8
+
+### Patch Changes
+
+- Fix VirtualList height
+- Updated dependencies
+  - @p-lc/react-shared@0.0.8
+  - @p-lc/shared@0.0.8
+  - @p-lc/lc-types-ui@0.0.8
+  - @p-lc/editor@0.0.8
+  - @p-lc/editor-element-attributes-store-plugins@0.0.8
+  - @p-lc/pd-utils@0.0.8
+  - @p-lc/uidl@0.0.8
+  - @p-lc/uidl-ext-i18n@0.0.8
+  - @p-lc/uidl-utils@0.0.8
+
 ## 0.0.7
 
 ### Patch Changes

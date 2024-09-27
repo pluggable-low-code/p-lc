@@ -1,5 +1,16 @@
 # @p-lc/lc-types-uidl
 
+## 0.0.8
+
+### Patch Changes
+
+- Fix VirtualList height
+- Updated dependencies
+  - @p-lc/pd@0.0.8
+  - @p-lc/uidl@0.0.8
+  - @p-lc/uidl-ext-i18n@0.0.8
+  - @p-lc/uidl-utils@0.0.8
+
 ## 0.0.7
 
 ### Patch Changes

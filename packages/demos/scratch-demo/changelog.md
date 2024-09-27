@@ -1,5 +1,14 @@
 # @p-lc/scratch-demo
 
+## 0.0.8
+
+### Patch Changes
+
+- Fix VirtualList height
+- Updated dependencies
+  - @p-lc/shared@0.0.8
+  - @p-lc/scratch-suite@0.0.8
+
 ## 0.0.7
 
 ### Patch Changes

@@ -1,5 +1,25 @@
 # @p-lc/editor-element-attributes-store-plugins
 
+## 0.0.8
+
+### Patch Changes
+
+- Fix VirtualList height
+- Updated dependencies
+  - @p-lc/react-shared@0.0.8
+  - @p-lc/shared@0.0.8
+  - @p-lc/lc-types-ui@0.0.8
+  - @p-lc/editor@0.0.8
+  - @p-lc/lc-types-uidl@0.0.8
+  - @p-lc/lc-types-uidl-utils@0.0.8
+  - @p-lc/pd@0.0.8
+  - @p-lc/uidl@0.0.8
+  - @p-lc/uidl-ext-switch-box@0.0.8
+  - @p-lc/uidl-utils@0.0.8
+  - @p-lc/lc-types-react-runtime@0.0.8
+  - @p-lc/runtime@0.0.8
+  - @p-lc/runtime-emitter-plugins@0.0.8
+
 ## 0.0.7
 
 ### Patch Changes

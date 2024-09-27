@@ -1,7 +1,7 @@
 import List, { type ListProps, type ListRef } from 'rc-virtual-list'
-import { useState, type ReactElement, type Ref } from 'react'
+import { type ReactElement, type Ref } from 'react'
+import { useSize } from 'react-use'
 import styled from 'styled-components'
-import { useComposeRef } from './rc-util'
 import { withStylePropsMf } from './style'
 
 /**
@@ -19,15 +19,15 @@ export interface VirtualListProps<T = unknown> extends ListProps<T> {
  */
 export const VirtualList = withStylePropsMf<VirtualListProps, HTMLDivElement>(
   ({ refList, ...restProps }, ref) => {
-    const [listHeight, setListHeight] = useState(1)
-    const finalRef = useComposeRef(ref, (el) => {
-      if (el) setListHeight(el.offsetHeight)
-    })
-    return (
-      <InternalVirtualListContainer ref={finalRef}>
-        <List {...restProps} height={listHeight} ref={refList} />
-      </InternalVirtualListContainer>
+    const [sized] = useSize(
+      ({ height }) => (
+        <InternalVirtualListContainer ref={ref}>
+          <List {...restProps} height={height} ref={refList} />
+        </InternalVirtualListContainer>
+      ),
+      { height: 1 },
     )
+    return sized
   },
 ) as <T = unknown>(props: VirtualListProps<T>) => ReactElement
 

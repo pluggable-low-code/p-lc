@@ -1,6 +1,6 @@
 {
   "name": "@p-lc/lc-types-react-runtime",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Low-code types React runtime",
   "homepage": "https://pluggable-low-code.github.io",
   "bugs": {

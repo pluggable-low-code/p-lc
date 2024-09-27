@@ -1,5 +1,25 @@
 # @p-lc/lc-types-react-runtime
 
+## 0.0.7
+
+### Patch Changes
+
+- Optimize the i18n text editing
+- Updated dependencies
+  - @p-lc/react-shared@0.0.7
+  - @p-lc/shared@0.0.7
+  - @p-lc/lc-types-uidl@0.0.7
+  - @p-lc/lc-types-uidl-utils@0.0.7
+  - @p-lc/uidl@0.0.7
+  - @p-lc/uidl-utils@0.0.7
+  - @p-lc/react-runtime@0.0.7
+  - @p-lc/runtime@0.0.7
+  - @p-lc/runtime-emitter-plugins@0.0.7
+  - @p-lc/runtime-expression-plugins@0.0.7
+  - @p-lc/runtime-i18n-plugins@0.0.7
+  - @p-lc/runtime-mobx-plugins@0.0.7
+  - @p-lc/runtime-mobx-react-plugins@0.0.7
+
 ## 0.0.6
 
 ### Patch Changes

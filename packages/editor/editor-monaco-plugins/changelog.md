@@ -1,5 +1,16 @@
 # @p-lc/editor-monaco-plugins
 
+## 0.0.7
+
+### Patch Changes
+
+- Optimize the i18n text editing
+- Updated dependencies
+  - @p-lc/react-shared@0.0.7
+  - @p-lc/shared@0.0.7
+  - @p-lc/editor@0.0.7
+  - @p-lc/uidl@0.0.7
+
 ## 0.0.6
 
 ### Patch Changes

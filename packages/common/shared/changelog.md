@@ -1,5 +1,13 @@
 # @p-lc/shared
 
+## 0.0.7
+
+### Patch Changes
+
+- Optimize the i18n text editing
+- Updated dependencies
+  - @p-lc/pd@0.0.7
+
 ## 0.0.6
 
 ### Patch Changes

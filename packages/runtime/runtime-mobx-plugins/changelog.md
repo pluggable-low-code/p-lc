@@ -1,5 +1,18 @@
 # @p-lc/runtime-mobx-plugins
 
+## 0.0.7
+
+### Patch Changes
+
+- Optimize the i18n text editing
+- Updated dependencies
+  - @p-lc/shared@0.0.7
+  - @p-lc/uidl@0.0.7
+  - @p-lc/uidl-ext-data@0.0.7
+  - @p-lc/uidl-utils@0.0.7
+  - @p-lc/runtime@0.0.7
+  - @p-lc/runtime-emitter-plugins@0.0.7
+
 ## 0.0.6
 
 ### Patch Changes

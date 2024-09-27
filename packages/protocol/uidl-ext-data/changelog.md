@@ -1,5 +1,11 @@
 # @p-lc/uidl-ext-data
 
+## 0.0.7
+
+### Patch Changes
+
+- Optimize the i18n text editing
+
 ## 0.0.6
 
 ### Patch Changes

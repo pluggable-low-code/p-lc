@@ -1,5 +1,16 @@
 # @p-lc/editor-i18next-plugins
 
+## 0.0.7
+
+### Patch Changes
+
+- Optimize the i18n text editing
+- Updated dependencies
+  - @p-lc/shared@0.0.7
+  - @p-lc/editor@0.0.7
+  - @p-lc/pd@0.0.7
+  - @p-lc/pd-utils@0.0.7
+
 ## 0.0.6
 
 ### Patch Changes

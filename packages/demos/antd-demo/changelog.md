@@ -1,5 +1,16 @@
 # @p-lc/antd-demo
 
+## 0.0.7
+
+### Patch Changes
+
+- Optimize the i18n text editing
+- Updated dependencies
+  - @p-lc/shared@0.0.7
+  - @lc-types/antd@0.0.7
+  - @p-lc/pd@0.0.7
+  - @p-lc/antd-suite@0.0.7
+
 ## 0.0.6
 
 ### Patch Changes

@@ -80,7 +80,7 @@ const InternalAttrGroupCollapse: typeof Collapse = styled(Collapse)`
   }
 
   &&& .ant-collapse-content-box {
-    padding: 0;
+    padding: 0 0 0 4px;
     display: flex;
     flex-direction: column;
   }

@@ -4,19 +4,25 @@ import {
   type StyleProps,
   TextArea,
   TypographyTextTip,
+  useComposeRef,
   useLatestFn,
-  withStylePropsObserver,
+  withStylePropsOf,
 } from '@p-lc/react-shared'
 import { Tooltip } from 'antd'
 import { EditPencil, MinusCircle } from 'iconoir-react'
-import type { ChangeEvent, FC } from 'react'
-import { useEffect, useId, useRef } from 'react'
+import type { ChangeEvent } from 'react'
+import { useId } from 'react'
 import styled from 'styled-components'
 import type { I18nEditEditor } from '../../../types'
 import {
   I18N_KEY_I18N_EDIT_DELETE_KEY,
   I18N_KEY_I18N_EDIT_EDIT_KEY,
 } from '../i18n'
+
+/**
+ * 国际化编辑条目最小高度
+ */
+export const I18N_EDIT_ITEM_MIN_HEIGHT = 74
 
 /**
  * 国际化编辑条目属性
@@ -39,11 +45,11 @@ export interface I18nEditItemProps extends StyleProps {
 /**
  * 国际化编辑条目，编辑某个语言下的某个键值及其文案
  */
-export const I18nEditItem: FC<I18nEditItemProps> = withStylePropsObserver(
-  ({ lng, i18nKey: key, text }) => {
+export const I18nEditItem = withStylePropsOf<I18nEditItemProps, HTMLDivElement>(
+  ({ lng, i18nKey: key, text }, ref) => {
     const {
       i18nStore: { t },
-      i18nEditStore: { setText, openKeyDialog, deleteKey, autoScrollToNewKey },
+      i18nEditStore: { setText, openKeyDialog, deleteKey, setElItem },
     } = useEditor<I18nEditEditor>()
     const recipeId = useId()
     const handleTextChange = useLatestFn(
@@ -53,13 +59,15 @@ export const I18nEditItem: FC<I18nEditItemProps> = withStylePropsObserver(
     )
     const handleEditBtnClick = useLatestFn(() => openKeyDialog(key))
     const handleDeleteBtnClick = useLatestFn(() => deleteKey(key))
-    const refEl = useRef<HTMLDivElement>(null)
-    useEffect(() => {
-      autoScrollToNewKey(refEl.current, lng, key)
+    const finalRef = useComposeRef(ref, (el: HTMLDivElement | null) => {
+      setElItem(lng, key, el)
     })
     // console.log('I18nEditItem render', lng, key)
     return (
-      <InternalI18nEditItemContainer className="lc-i18n-edit-item" ref={refEl}>
+      <InternalI18nEditItemContainer
+        className="lc-i18n-edit-item"
+        ref={finalRef}
+      >
         <div className="lc-title">
           <TypographyTextTip className="lc-key">{key}</TypographyTextTip>
           <Tooltip title={t(I18N_KEY_I18N_EDIT_EDIT_KEY)}>

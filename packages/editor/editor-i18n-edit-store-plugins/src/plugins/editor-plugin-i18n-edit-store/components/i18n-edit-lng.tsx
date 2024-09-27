@@ -1,20 +1,18 @@
 import { useEditor } from '@p-lc/editor'
 import type { StyleProps } from '@p-lc/react-shared'
 import {
-  IconBtn,
+  TypographyTitleSmall5,
   useLatestFn,
+  VirtualList,
   withStylePropsObserver,
 } from '@p-lc/react-shared'
-import { VCVN_COLOR_BG } from '@p-lc/shared'
-import { Tooltip } from 'antd'
-import { PlusCircle } from 'iconoir-react'
-import { keys } from 'lodash-uni'
-import type { FC } from 'react'
-import { useRef } from 'react'
+import { echo } from '@p-lc/shared'
+import type { ListRef } from 'rc-virtual-list'
+import { useEffect, type FC } from 'react'
 import styled from 'styled-components'
 import type { I18nEditEditor } from '../../../types'
-import { I18N_KEY_I18N_EDIT_ADD_KEY } from '../i18n'
-import { I18nEditItem } from './i18n-edit-item'
+import { I18N_KEY_I18N_EDIT_NONE } from '../i18n'
+import { I18N_EDIT_ITEM_MIN_HEIGHT, I18nEditItem } from './i18n-edit-item'
 
 /**
  * 国际化编辑语言属性
@@ -33,35 +31,46 @@ export const I18nEditLng: FC<I18nEditLngProps> = withStylePropsObserver(
   ({ lng }) => {
     const {
       i18nStore: { t },
-      i18nEditStore,
+      i18nEditStore: {
+        filteredKeys,
+        getLngRes,
+        setRefVirtualList,
+        autoScrollToNewKey,
+      },
     } = useEditor<I18nEditEditor>()
-    const { getLngRes, openKeyDialog } = i18nEditStore
-    const title = t(I18N_KEY_I18N_EDIT_ADD_KEY)
-    const handleAddBtnClick = useLatestFn(() => openKeyDialog())
-    const refElI18nEditLng = useRef<HTMLDivElement>(null)
+    const refList = useLatestFn((refVirtualList: ListRef | null) => {
+      setRefVirtualList(lng, refVirtualList)
+    })
     const lngRes = getLngRes(lng)
-    const finalKeys = lngRes ? keys(lngRes) : i18nEditStore.keys
+    useEffect(() => {
+      autoScrollToNewKey(lng)
+    })
     // console.log('I18nEditLng render', lng)
     return (
-      <InternalI18nEditLngContainer
-        className="lc-i18n-edit-lng"
-        ref={refElI18nEditLng}
-      >
-        <div className="lc-add">
-          <Tooltip title={title}>
-            <IconBtn onClick={handleAddBtnClick}>
-              <PlusCircle />
-            </IconBtn>
-          </Tooltip>
-        </div>
-        {finalKeys.map((key) => (
-          <I18nEditItem
-            lng={lng}
-            i18nKey={key}
-            text={lngRes?.[key] || ''}
-            key={key}
-          />
-        ))}
+      <InternalI18nEditLngContainer className="lc-i18n-edit-lng">
+        <VirtualList
+          data={filteredKeys}
+          itemHeight={I18N_EDIT_ITEM_MIN_HEIGHT}
+          itemKey={echo}
+          refList={refList}
+        >
+          {(key) => {
+            return (
+              <I18nEditItem
+                lng={lng}
+                i18nKey={key}
+                text={lngRes?.[key] || ''}
+              />
+            )
+          }}
+        </VirtualList>
+        {!filteredKeys.length && (
+          <div className="lc-none">
+            <TypographyTitleSmall5 type="secondary">
+              {t(I18N_KEY_I18N_EDIT_NONE)}
+            </TypographyTitleSmall5>
+          </div>
+        )}
       </InternalI18nEditLngContainer>
     )
   },
@@ -71,23 +80,16 @@ export const I18nEditLng: FC<I18nEditLngProps> = withStylePropsObserver(
  * 内部：国际化编辑语言容器
  */
 export const InternalI18nEditLngContainer = styled.div`
-  height: calc(100% + 8px);
-  overflow: auto;
-  padding: 8px 0;
-  margin-top: -8px;
+  position: relative;
+  height: 100%;
 
-  .lc-add {
-    position: sticky;
-    top: 0;
-    padding: 8px 0;
-    transform: translate(0, -8px);
-    z-index: 1;
-    background: ${VCVN_COLOR_BG};
-    display: flex;
-    justify-content: center;
+  .lc-none {
+    position: absolute;
+    inset: 100px 0;
+    text-align: center;
 
-    .lc-icon-btn {
-      font-size: 14px;
+    &&& .ant-typography {
+      font-weight: normal;
     }
   }
 `

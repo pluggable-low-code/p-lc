@@ -1,4 +1,6 @@
 export * from './i18n-edit'
 export * from './i18n-edit-icon'
 export * from './i18n-edit-item'
+export * from './i18n-edit-key-dialog'
 export * from './i18n-edit-lng'
+export * from './i18n-edit-search'

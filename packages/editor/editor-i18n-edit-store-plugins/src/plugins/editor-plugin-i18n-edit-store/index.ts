@@ -20,6 +20,7 @@ import {
 } from 'lodash-uni'
 import { action, computed, makeObservable, observable } from 'mobx'
 import { computedFn } from 'mobx-utils'
+import type { ListRef } from 'rc-virtual-list'
 import type { EditorPluginI18nEditStoreI18nKeyOptions } from './i18n'
 import {
   editorPluginI18nEditStoreI18n,
@@ -67,6 +68,30 @@ export interface EditorPluginI18nEditStorePropertiesExt {
        */
       setEl(el: HTMLElement | null): void
       /**
+       * 虚拟列表引用
+       */
+      refVirtualLists: Record<string, ListRef | null | undefined>
+      /**
+       * 设置虚拟列表引用
+       * @param lng 语言
+       * @param refVirtualList 虚拟列表引用
+       */
+      setRefVirtualList(lng: string, refVirtualList: ListRef | null): void
+      /**
+       * 条目元素
+       */
+      elItems: Record<
+        string,
+        Record<string, HTMLDivElement | null | undefined> | undefined
+      >
+      /**
+       * 设置条目元素
+       * @param lng 语言
+       * @param key 键值
+       * @param el 原生元素
+       */
+      setElItem(lng: string, key: string, el: HTMLDivElement | null): void
+      /**
        * UIDL 里的国际化字段，不存在时返回等价的空对象
        */
       uidlI18n?: I18nResource
@@ -82,6 +107,19 @@ export interface EditorPluginI18nEditStorePropertiesExt {
        * 键值集合
        */
       keySet: Set<string>
+      /**
+       * 搜索文本
+       */
+      searchText: string
+      /**
+       * 设置搜索文本
+       * @param text 文本
+       */
+      setSearchText(text: string): void
+      /**
+       * 过滤后的键值
+       */
+      filteredKeys: string[]
       /**
        * 获取语言资源，computed
        * @param lng 语言
@@ -158,15 +196,9 @@ export interface EditorPluginI18nEditStorePropertiesExt {
       closeKeyDialog(newKey?: string): void
       /**
        * 自动滚动到新的键值
-       * @param el 渲染元素
        * @param renderLng 渲染时的语言
-       * @param renderKey 渲染时的键
        */
-      autoScrollToNewKey(
-        el: HTMLElement | null,
-        renderLng: string,
-        renderKey: string,
-      ): void
+      autoScrollToNewKey(renderLng: string): void
       /**
        * 自动聚焦到新的键值
        */
@@ -203,6 +235,16 @@ export const editorPluginI18nEditStore: EditorPlugin<EditorPluginI18nEditStorePr
       i18nEditStore.setEl = (el) => {
         i18nEditStore.el = el
       }
+      i18nEditStore.refVirtualLists = {}
+      // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+      i18nEditStore.setRefVirtualList = (lng, refVirtualList) => {
+        i18nEditStore.refVirtualLists[lng] = refVirtualList
+      }
+      i18nEditStore.elItems = {}
+      // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+      i18nEditStore.setElItem = (lng, key, el) => {
+        set(i18nEditStore.elItems, [lng, key], el)
+      }
       definePropertyByGetter(i18nEditStore, 'uidlI18n', () => {
         const { uidl } = uidlStore
         return uidl?.i18n
@@ -217,6 +259,14 @@ export const editorPluginI18nEditStore: EditorPlugin<EditorPluginI18nEditStorePr
       definePropertyByGetter(i18nEditStore, 'keySet', () => {
         const { keys: ks } = i18nEditStore
         return new Set(ks)
+      })
+      i18nEditStore.searchText = ''
+      i18nEditStore.setSearchText = action((text: string) => {
+        i18nEditStore.searchText = text
+      })
+      definePropertyByGetter(i18nEditStore, 'filteredKeys', () => {
+        const { keys: ks, searchText } = i18nEditStore
+        return searchText ? ks.filter((k) => k.includes(searchText)) : ks
       })
       i18nEditStore.getLngRes = computedFn((lng) => {
         const { uidlI18n } = i18nEditStore
@@ -290,6 +340,7 @@ export const editorPluginI18nEditStore: EditorPlugin<EditorPluginI18nEditStorePr
         i18nEditStore.dialogIsOpen = true
       })
       let autoScrollTask: [string, string] | null = null
+      let autoFocusTask: [string, string] | null = null
       i18nEditStore.closeKeyDialog = action((newKey) => {
         const { dialogOldKey, editingLng } = i18nEditStore
         if (newKey) {
@@ -302,32 +353,31 @@ export const editorPluginI18nEditStore: EditorPlugin<EditorPluginI18nEditStorePr
         }
         i18nEditStore.dialogIsOpen = false
       })
-      let lastElScrollTo: HTMLElement | null = null
       // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-      i18nEditStore.autoScrollToNewKey = (el, renderLng, renderKey) => {
-        if (!autoScrollTask || !el) return
+      i18nEditStore.autoScrollToNewKey = (renderLng) => {
+        if (!autoScrollTask) return
         const [lng, key] = autoScrollTask
-        if (renderLng !== lng || renderKey !== key) {
-          return
-        }
-        el.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center',
-        })
-        lastElScrollTo = el
+        const refVirtualList = i18nEditStore.refVirtualLists[renderLng]
+        if (renderLng !== lng || !refVirtualList) return
+        refVirtualList.scrollTo({ key })
+        autoFocusTask = autoScrollTask
         autoScrollTask = null
       }
       // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
       i18nEditStore.autoFocusToNewKey = () => {
-        if (!lastElScrollTo) return
-        lastElScrollTo.querySelector('textarea')?.focus()
-        lastElScrollTo = null
+        if (!autoFocusTask) return
+        const [lng, key] = autoFocusTask
+        const el = i18nEditStore.elItems[lng]?.[key]
+        el?.querySelector('textarea')?.focus()
+        autoFocusTask = null
       }
       makeObservable(i18nEditStore, {
         uidlI18n: computed,
         lngs: computed,
         keys: computed,
         keySet: computed,
+        searchText: observable,
+        filteredKeys: computed,
         editingLng: observable,
         dialogIsOpen: observable,
         dialogOldKey: observable,

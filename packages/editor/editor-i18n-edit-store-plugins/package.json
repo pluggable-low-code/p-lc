@@ -37,6 +37,7 @@
     "lodash-uni": "^1.2.0",
     "mobx": "^6.13.1",
     "mobx-utils": "^6.0.8",
+    "rc-virtual-list": "^3.14.7",
     "react-use": "^17.5.1",
     "styled-components": "^6.1.12",
     "type-fest": "^4.23.0"

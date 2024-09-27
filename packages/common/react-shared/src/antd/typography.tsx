@@ -1,6 +1,13 @@
 import { Tooltip, Typography } from 'antd'
-import { memo, type ComponentProps, type FC } from 'react'
+import {
+  memo,
+  useState,
+  type ComponentProps,
+  type FC,
+  type MouseEventHandler,
+} from 'react'
 import styled from 'styled-components'
+import { useLatestFn } from '../hooks'
 
 const {
   Text: TypographyText,
@@ -31,15 +38,6 @@ export const TypographyTitleSmall4: typeof TypographyTitle = styled(
 `
 
 /**
- * 排版（文本）带提示的省略
- */
-export const typographyEllipsisWithTooltip: NonNullable<
-  ComponentProps<typeof TypographyText>['ellipsis']
-> = {
-  tooltip: true,
-}
-
-/**
  * 排版文本提示属性
  */
 export interface TypographyTextTipProps
@@ -61,9 +59,45 @@ export const TypographyTextTip: FC<TypographyTextTipProps> = memo(
         <TypographyText {...restProps}>{children}</TypographyText>
       </Tooltip>
     ) : (
-      <TypographyText ellipsis={typographyEllipsisWithTooltip} {...restProps}>
+      <TypographyTextAutoEllipsis {...restProps}>
         {children}
-      </TypographyText>
+      </TypographyTextAutoEllipsis>
     )
   },
 )
+
+/**
+ * 排版（文本）带提示的省略
+ */
+const typographyEllipsisWithTooltip: NonNullable<
+  ComponentProps<typeof TypographyText>['ellipsis']
+> = {
+  tooltip: true,
+}
+
+/**
+ * 排版文本自动省略
+ *
+ * Typography.Text 性能比较差，加了 ellipsis 更差，加了 ellipsis.tooltip 非常差
+ */
+const TypographyTextAutoEllipsis: FC<TypographyTextTipProps> = ({
+  onMouseEnter,
+  children,
+  ...restProps
+}) => {
+  const [entered, setEntered] = useState(false)
+  const handleTypographyTextMouseEnter: MouseEventHandler<HTMLElement> =
+    useLatestFn((ev) => {
+      setEntered(true)
+      onMouseEnter?.(ev)
+    })
+  return (
+    <TypographyText
+      ellipsis={entered ? typographyEllipsisWithTooltip : true}
+      {...restProps}
+      onMouseEnter={handleTypographyTextMouseEnter}
+    >
+      {children}
+    </TypographyText>
+  )
+}

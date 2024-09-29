@@ -7,7 +7,11 @@ import {
   VirtualList,
   withStylePropsObserver,
 } from '@p-lc/react-shared'
-import { jsonStringify, type ValueOnChangeProps } from '@p-lc/shared'
+import {
+  filterStringsByRegExp,
+  jsonStringify,
+  type ValueOnChangeProps,
+} from '@p-lc/shared'
 import type { UidlExpression } from '@p-lc/uidl'
 import type { UidlExpressionI18n } from '@p-lc/uidl-ext-i18n'
 import { EXPRESSION_TYPE_I18N, isI18nExpression } from '@p-lc/uidl-ext-i18n'
@@ -59,14 +63,9 @@ export const I18nBinderBody: FC<I18nBinderBodyProps> = withStylePropsObserver(
         setSearchText(ev.target.value)
       },
     )
-    const keyChunks = useMemo(
-      () =>
-        chunk(
-          searchText ? keys.filter((key) => key.includes(searchText)) : keys,
-          4,
-        ),
-      [keys, searchText],
-    )
+    const keyChunks = useMemo(() => {
+      return chunk(filterStringsByRegExp(keys, searchText), 4)
+    }, [keys, searchText])
     // console.log('I18nBinderBody render')
     return (
       <InternalI18nBinderBodyContainer className="lc-i18n-binder-body">

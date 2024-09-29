@@ -605,7 +605,7 @@ export function generateImplementsStyleElements(
             type: 'js',
             code: `(() => {
               const expr = ctx.root.getUnboxNormExpr(['props', 'style', 'display'])
-              return !!(expr && (expr.type !== 'static' || expr.value === 'flex'))
+              return !!(expr && (expr.type !== 'static' || expr.value === 'flex' || expr.value === 'inline-flex'))
             })()`,
           },
         },
@@ -679,7 +679,7 @@ export function generateImplementsStyleElements(
             type: 'js',
             code: `(() => {
               const expr = ctx.root.getUnboxNormExpr(['props', 'style', 'display'])
-              return !!(expr && (expr.type !== 'static' || expr.value === 'flex'))
+              return !!(expr && (expr.type !== 'static' || expr.value === 'flex' || expr.value === 'inline-flex'))
             })()`,
           },
         },
@@ -753,7 +753,7 @@ export function generateImplementsStyleElements(
             type: 'js',
             code: `(() => {
               const expr = ctx.root.getUnboxNormExpr(['props', 'style', 'display'])
-              return !!(expr && (expr.type !== 'static' || expr.value === 'flex'))
+              return !!(expr && (expr.type !== 'static' || expr.value === 'flex' || expr.value === 'inline-flex'))
             })()`,
           },
         },
@@ -807,7 +807,7 @@ export function generateImplementsStyleElements(
             type: 'js',
             code: `(() => {
               const expr = ctx.root.getUnboxNormExpr(['props', 'style', 'display'])
-              return !!(expr && (expr.type !== 'static' || expr.value === 'flex'))
+              return !!(expr && (expr.type !== 'static' || expr.value === 'flex' || expr.value === 'inline-flex'))
             })()`,
           },
         },
@@ -826,7 +826,7 @@ export function generateImplementsStyleElements(
             type: 'js',
             code: `(() => {
               const expr = ctx.root.getUnboxNormExpr(['props', 'style', 'display'])
-              return !!(expr && (expr.type !== 'static' || expr.value === 'flex'))
+              return !!(expr && (expr.type !== 'static' || expr.value === 'flex' || expr.value === 'inline-flex'))
             })()`,
           },
         },

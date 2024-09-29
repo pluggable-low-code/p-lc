@@ -4,6 +4,7 @@ import {
   EN_US,
   ZH_CN,
   definePropertyByGetter,
+  filterStringsByRegExp,
   firstValueOfObject,
 } from '@p-lc/shared'
 import type { UidlExtI18n } from '@p-lc/uidl-ext-i18n'
@@ -266,7 +267,7 @@ export const editorPluginI18nEditStore: EditorPlugin<EditorPluginI18nEditStorePr
       })
       definePropertyByGetter(i18nEditStore, 'filteredKeys', () => {
         const { keys: ks, searchText } = i18nEditStore
-        return searchText ? ks.filter((k) => k.includes(searchText)) : ks
+        return filterStringsByRegExp(ks, searchText)
       })
       i18nEditStore.getLngRes = computedFn((lng) => {
         const { uidlI18n } = i18nEditStore

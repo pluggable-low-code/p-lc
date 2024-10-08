@@ -85,12 +85,14 @@ const TypographyTextAutoEllipsis: FC<TypographyTextTipProps> = ({
   children,
   ...restProps
 }) => {
-  const [entered, setEntered] = useState(false)
+  const [hoveredChildren, setHoveredChildren] = useState<unknown>(false)
   const handleTypographyTextMouseEnter: MouseEventHandler<HTMLElement> =
     useLatestFn((ev) => {
-      setEntered(true)
+      setHoveredChildren(children)
       onMouseEnter?.(ev)
     })
+  // 改变 children 时可能引起抖动
+  const entered = hoveredChildren === children
   return (
     <TypographyText
       ellipsis={entered ? typographyEllipsisWithTooltip : true}

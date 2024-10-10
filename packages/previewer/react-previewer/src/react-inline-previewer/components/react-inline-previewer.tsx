@@ -28,6 +28,7 @@ export const ReactInlinePreviewer: FC<StyleProps> = withStylePropsObserver(
     }
     const handleScrollCapture = useCallback(() => {
       previewerStore.syncSeb()
+      previewerStore.syncHeb()
     }, [previewerStore])
     const runtimeProps = useDndInlinePreview()
     const refRuntime = useComposeRef<HTMLDivElement>(

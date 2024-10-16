@@ -6,7 +6,7 @@ import {
   type FC,
   type MouseEventHandler,
 } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { useLatestFn } from '../hooks'
 
 const {
@@ -94,12 +94,28 @@ const TypographyTextAutoEllipsis: FC<TypographyTextTipProps> = ({
   // 改变 children 时可能引起抖动
   const entered = hoveredChildren === children
   return (
-    <TypographyText
-      ellipsis={entered ? typographyEllipsisWithTooltip : true}
-      {...restProps}
+    <StyledTypographyText
+      $cssEllipsis={!entered}
+      ellipsis={entered ? typographyEllipsisWithTooltip : false}
+      {...(restProps as Partial<ComponentProps<typeof StyledTypographyText>>)}
       onMouseEnter={handleTypographyTextMouseEnter}
     >
       {children}
-    </TypographyText>
+    </StyledTypographyText>
   )
 }
+
+const StyledTypographyText = styled(TypographyText)<{
+  $cssEllipsis?: boolean
+}>`
+  ${
+    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+    ({ $cssEllipsis }) =>
+      $cssEllipsis &&
+      css`
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      `
+  }
+`

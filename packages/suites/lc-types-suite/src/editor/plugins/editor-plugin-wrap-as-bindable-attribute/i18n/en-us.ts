@@ -6,5 +6,5 @@ import type { EditorPluginWrapAsBindableAttributeI18nLanguageResource } from './
  */
 export const editorPluginWrapAsBindableAttributeI18nEnUs: EditorPluginWrapAsBindableAttributeI18nLanguageResource =
   {
-    [I18N_KEY_WRAP_AS_BINDABLE_ATTRIBUTE]: 'Wrap as bindable attribute',
+    [I18N_KEY_WRAP_AS_BINDABLE_ATTRIBUTE]: 'Wrap as a bindable attribute',
   }

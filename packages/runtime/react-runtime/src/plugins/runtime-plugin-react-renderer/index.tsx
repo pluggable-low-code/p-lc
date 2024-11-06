@@ -100,6 +100,7 @@ export const runtimePluginReactRenderer: RuntimePlugin<
     }) as typeof ctx.render
   },
   initController(ctx) {
+    // TODO: 处理父组件覆盖子组件 props 问题
     ctx.render = ((props, ref) => {
       const key = (props?.key as string | number | undefined) || ctx.key
       return (

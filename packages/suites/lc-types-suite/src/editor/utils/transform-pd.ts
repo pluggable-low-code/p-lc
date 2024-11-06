@@ -1,4 +1,4 @@
-import type { LcTypesUidlElement } from '@p-lc/lc-types-uidl'
+import type { LcTypesUidl, LcTypesUidlElement } from '@p-lc/lc-types-uidl'
 import type { DynamicPathSlot, Pd, Slot, StaticPathSlot, Text } from '@p-lc/pd'
 import { SLOT_TYPE_DYNAMIC_PATH } from '@p-lc/pd-utils'
 import type { JsonPath } from '@p-lc/shared'
@@ -19,18 +19,32 @@ export function transformPdBeforeSave(pd: Pd, ctx: LcTypesEditor): Pd {
     for (const cd of draft.components) {
       let slotAttrElementType: string | undefined
       let attrListElementType: string | undefined
+      let attrSwitcherElementType: string | undefined
       for (const { elementType, pkgName, componentType } of cd.components ||
         []) {
         if (pkgName === PKG_NAME_LC_TYPES_UI) {
-          if (componentType === 'SlotAttr') {
-            slotAttrElementType = elementType
-          } else if (componentType === 'AttrList') {
-            attrListElementType = elementType
+          switch (componentType) {
+            case 'SlotAttr': {
+              slotAttrElementType = elementType
+              break
+            }
+            case 'AttrList': {
+              attrListElementType = elementType
+              break
+            }
+            case 'AttrSwitcher': {
+              attrSwitcherElementType = elementType
+              break
+            }
           }
         }
       }
       const idLogicPathMap = new Map<string, JsonPath>()
       const idIsListMap = new Map<string, boolean>()
+      const idSwitcherPropsMap = new Map<
+        string | null,
+        LcTypesUidlElement['props']
+      >()
       const getMergedLogicPath = (
         elementIdPath: string[],
       ): [boolean, JsonPath] => {
@@ -50,20 +64,19 @@ export function transformPdBeforeSave(pd: Pd, ctx: LcTypesEditor): Pd {
       }
       const slots: Slot[] = []
       if (slotAttrElementType) {
-        for (const ed of dfsElement(uidlUtilsConfig, cd)) {
-          const { element, elementIdPath } = ed
-          const {
-            id,
-            type,
-            props,
-            logicPath = [],
-          } = element as LcTypesUidlElement
+        for (const ed of dfsElement<LcTypesUidl>(uidlUtilsConfig, cd)) {
+          const { element, elementIdPath, parentElementId } = ed
+          const { id, type, props, logicPath = [] } = element
           idLogicPathMap.set(id, logicPath)
           idIsListMap.set(id, type === attrListElementType)
+          if (type === attrSwitcherElementType) {
+            idSwitcherPropsMap.set(id, props)
+          }
           const [isDynamicPath, mergedLogicPath] =
             getMergedLogicPath(elementIdPath)
           if (type === slotAttrElementType) {
-            const propLabel = props?.label
+            const propLabel =
+              props?.label || idSwitcherPropsMap.get(parentElementId)?.label
             const propDynamic = props?.dynamic
             let name: Text | undefined
             if (isString(propLabel)) {

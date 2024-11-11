@@ -50,12 +50,13 @@ function evalExpression<Expression extends UidlExpression>(
     DepPluginUniteRuntimePlugin<typeof runtimePluginEvalExpression>
   >,
   expr: Expression,
-  {
+  options?: EvalExpressionOptions,
+): unknown {
+  const {
     relativeJsonPath = [],
     relativeLogicPath = [],
     silent,
-  }: EvalExpressionOptions = {},
-): unknown {
+  } = options || {}
   const finalOptions: ExpressionEvalOptions = {
     relativeJsonPath,
     relativeLogicPath,
@@ -66,27 +67,21 @@ function evalExpression<Expression extends UidlExpression>(
       | AnyExpressionEvaluator
       | undefined
     if (!ee) {
-      if (process.env.NODE_ENV === 'development') {
-        console.error(`invalid expression type: ${normalizedExpr.type}`, {
-          expr,
-          ctx: this,
-        })
-      }
       throw new Error(`invalid expression type: ${normalizedExpr.type}`)
     }
     return ee.eval(normalizedExpr, this, finalOptions)
   } catch (err) {
-    if (silent) {
-      if (process.env.NODE_ENV === 'test') {
-        console.log(`eval expression failed silent: ${(err as Error).message}`)
-      } else {
-        console.error('eval expression failed silent: ', {
-          err,
-          expr,
-          ctx: this,
-        })
-      }
+    if (process.env.NODE_ENV === 'test') {
+      console.log(`eval expression failed: ${(err as Error).message}`)
     } else {
+      console.error('eval expression failed: ', {
+        err,
+        ctx: this,
+        expr,
+        options,
+      })
+    }
+    if (!silent) {
       throw err
     }
   }

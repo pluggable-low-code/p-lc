@@ -45730,6 +45730,1361 @@
       ]
     },
     {
+      "type": "Mentions",
+      "name": {
+        "key": "mentionsName"
+      },
+      "components": [
+        {
+          "elementType": "AttrRoot_0",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrRoot"
+        },
+        {
+          "elementType": "StringAttr_1",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "StringAttr"
+        },
+        {
+          "elementType": "BindingAttr_2",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "BindingAttr"
+        },
+        {
+          "elementType": "AttrSwitcher_3",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrSwitcher"
+        },
+        {
+          "elementType": "EnumAttr_4",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "EnumAttr"
+        },
+        {
+          "elementType": "BooleanAttr_5",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "BooleanAttr"
+        },
+        {
+          "elementType": "AttrCategories_6",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrCategories"
+        },
+        {
+          "elementType": "AttrGroup_7",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "AttrGroup"
+        },
+        {
+          "elementType": "SlotAttr_8",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "SlotAttr"
+        },
+        {
+          "elementType": "NumberAttr_9",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "NumberAttr"
+        },
+        {
+          "elementType": "JsonAttr_10",
+          "pkgName": "@p-lc/lc-types-ui",
+          "pkgVersion": "0.0.1",
+          "componentType": "JsonAttr"
+        }
+      ],
+      "view": {
+        "id": "root",
+        "name": "Low-code types",
+        "type": "AttrRoot_0",
+        "children": [
+          {
+            "id": "rsCqrYqN5O0712ACZiFOM8",
+            "name": "Categories",
+            "type": "AttrCategories_6",
+            "props": {
+              "items": {
+                "type": "array",
+                "value": [
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "basics",
+                      "label": {
+                        "type": "i18n",
+                        "key": "strBasics"
+                      },
+                      "children": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "rvFsbsXEFs$pbZT$eh3o0r",
+                            "name": "Group",
+                            "type": "AttrGroup_7",
+                            "props": {
+                              "label": {
+                                "type": "i18n",
+                                "key": "strContent"
+                              }
+                            },
+                            "children": [
+                              {
+                                "id": "rGteDb5V1PpzfrW$LAgwEO",
+                                "name": "Switcher 8",
+                                "type": "AttrSwitcher_3",
+                                "props": {
+                                  "items": {
+                                    "type": "array",
+                                    "value": [
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "static",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "switcherStatic"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "r7s9lcvCEFcIpuf0SZrBfa",
+                                                "name": "JSON",
+                                                "type": "JsonAttr_10"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "BindingAttr",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "bindingAttrName"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "r3Rv4LTvtyiVioMP86veBb",
+                                                "name": "Binding 9",
+                                                "type": "BindingAttr_2"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "label": {
+                                    "type": "i18n",
+                                    "key": "strOptions"
+                                  }
+                                },
+                                "logicPath": [
+                                  "props",
+                                  "options"
+                                ]
+                              },
+                              {
+                                "id": "r00h0aBbG48YxdzjFXzphq",
+                                "name": "Switcher",
+                                "type": "AttrSwitcher_3",
+                                "props": {
+                                  "items": {
+                                    "type": "array",
+                                    "value": [
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "static",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "switcherStatic"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "r6X54Xf$YX6531tF2uI600",
+                                                "name": "String",
+                                                "type": "StringAttr_1",
+                                                "props": {
+                                                  "enableI18n": true
+                                                }
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "BindingAttr",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "bindingAttrName"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rGrg9QdlOhbxRqsQUX5$zs",
+                                                "name": "Binding",
+                                                "type": "BindingAttr_2"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "label": {
+                                    "type": "i18n",
+                                    "key": "strPlaceholder"
+                                  },
+                                  "layout": "vertical"
+                                },
+                                "logicPath": [
+                                  "props",
+                                  "placeholder"
+                                ]
+                              },
+                              {
+                                "id": "rKk_P267Fk0ztpj0VnWQO7",
+                                "name": "Switcher 7",
+                                "type": "AttrSwitcher_3",
+                                "props": {
+                                  "items": {
+                                    "type": "array",
+                                    "value": [
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "static",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "switcherStatic"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rPlsUCgwsvyX1OJQGM4bol",
+                                                "name": "String 2",
+                                                "type": "StringAttr_1",
+                                                "props": {
+                                                  "enableI18n": true
+                                                }
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "BindingAttr",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "bindingAttrName"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "r$tnYSu6GmK$bKW7A6lDm4",
+                                                "name": "Binding 8",
+                                                "type": "BindingAttr_2"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "label": {
+                                    "type": "i18n",
+                                    "key": "strMentionsSplit"
+                                  }
+                                },
+                                "logicPath": [
+                                  "props",
+                                  "split"
+                                ]
+                              },
+                              {
+                                "id": "rRHk1VwxF6xt$gsxxnpfCh",
+                                "name": "Slot 3",
+                                "type": "SlotAttr_8",
+                                "props": {
+                                  "label": {
+                                    "type": "i18n",
+                                    "key": "strPrefix"
+                                  }
+                                },
+                                "logicPath": [
+                                  "props",
+                                  "prefix"
+                                ]
+                              },
+                              {
+                                "id": "r4gHRzhT8x_MzX7mKLGzzC",
+                                "name": "Switcher 5",
+                                "type": "AttrSwitcher_3",
+                                "props": {
+                                  "items": {
+                                    "type": "array",
+                                    "value": [
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "static",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "switcherStatic"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rZMudELLFsHqtWJmhs$8tk",
+                                                "name": "Boolean 5",
+                                                "type": "BooleanAttr_5",
+                                                "props": {
+                                                  "defaultValue": true
+                                                }
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "BindingAttr",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "bindingAttrName"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rhdMDkL0xdWoGzmc8WrZps",
+                                                "name": "Binding 5",
+                                                "type": "BindingAttr_2"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "label": {
+                                    "type": "i18n",
+                                    "key": "strFilterOption"
+                                  },
+                                  "layout": "vertical"
+                                },
+                                "logicPath": [
+                                  "props",
+                                  "filterOption"
+                                ]
+                              },
+                              {
+                                "id": "rqbwyQN8$wTDMXkhEdU332",
+                                "name": "Binding 6",
+                                "type": "BindingAttr_2",
+                                "props": {
+                                  "label": {
+                                    "type": "i18n",
+                                    "key": "strGetPopupContainer"
+                                  },
+                                  "layout": "vertical"
+                                },
+                                "logicPath": [
+                                  "props",
+                                  "getPopupContainer"
+                                ]
+                              },
+                              {
+                                "id": "rLVcF_oSkSfvzB29ug$RRI",
+                                "name": "Slot",
+                                "type": "SlotAttr_8",
+                                "props": {
+                                  "label": {
+                                    "type": "i18n",
+                                    "key": "strNotFoundContent"
+                                  },
+                                  "layout": "vertical"
+                                },
+                                "logicPath": [
+                                  "props",
+                                  "notFoundContent"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "id": "rZAqGli8U8vOIvjcVk1JPG",
+                            "name": "Group 2",
+                            "type": "AttrGroup_7",
+                            "props": {
+                              "label": {
+                                "type": "i18n",
+                                "key": "strTypes"
+                              }
+                            },
+                            "children": [
+                              {
+                                "id": "rkkU0llnmNFjmgjJnMuXIt",
+                                "name": "Switcher 2",
+                                "type": "AttrSwitcher_3",
+                                "props": {
+                                  "items": {
+                                    "type": "array",
+                                    "value": [
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "static",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "switcherStatic"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rdGdqbUXVw2CdVue2Biw96",
+                                                "name": "Boolean",
+                                                "type": "BooleanAttr_5"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "BindingAttr",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "bindingAttrName"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "r6Kmo1yQIVwdrRYzFY7qWs",
+                                                "name": "Binding 2",
+                                                "type": "BindingAttr_2"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "label": {
+                                    "type": "i18n",
+                                    "key": "strAllowClear"
+                                  },
+                                  "layout": "vertical"
+                                },
+                                "logicPath": [
+                                  "props",
+                                  "allowClear"
+                                ]
+                              },
+                              {
+                                "id": "rnopYOD_yS2o6PgSevDWMn",
+                                "name": "Switcher 3",
+                                "type": "AttrSwitcher_3",
+                                "props": {
+                                  "items": {
+                                    "type": "array",
+                                    "value": [
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "static",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "switcherStatic"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rysHy38APgG74bGGbO4ijE",
+                                                "name": "Boolean 2",
+                                                "type": "BooleanAttr_5"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "BindingAttr",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "bindingAttrName"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rdNdDI9lKvgUUCmt2qjg$r",
+                                                "name": "Binding 3",
+                                                "type": "BindingAttr_2"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "label": {
+                                    "type": "i18n",
+                                    "key": "strAutoFocus"
+                                  },
+                                  "layout": "vertical"
+                                },
+                                "logicPath": [
+                                  "props",
+                                  "autoFocus"
+                                ]
+                              },
+                              {
+                                "id": "r4Mr3NNg5x$jTNkydAFGTk",
+                                "name": "Switcher 4",
+                                "type": "AttrSwitcher_3",
+                                "props": {
+                                  "items": {
+                                    "type": "array",
+                                    "value": [
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "BooleanAttr",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "booleanAttrName"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rkNCwY3I2UWvSXZQ5BmnVe",
+                                                "name": "Boolean 4",
+                                                "type": "BooleanAttr_5"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "object",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "strObject"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rMuzRp3KQn8kN2TEG6Lr86",
+                                                "name": "Group 3",
+                                                "type": "AttrGroup_7",
+                                                "children": [
+                                                  {
+                                                    "id": "rv6$QmjBUZ_uY04rQuA7K9",
+                                                    "name": "Number",
+                                                    "type": "NumberAttr_9",
+                                                    "props": {
+                                                      "label": {
+                                                        "type": "i18n",
+                                                        "key": "strMinRows"
+                                                      }
+                                                    },
+                                                    "logicPath": [
+                                                      "minRows"
+                                                    ]
+                                                  },
+                                                  {
+                                                    "id": "rweSd64Nn9EDqauDsHsprF",
+                                                    "name": "Number 2",
+                                                    "type": "NumberAttr_9",
+                                                    "props": {
+                                                      "label": {
+                                                        "type": "i18n",
+                                                        "key": "strMaxRows"
+                                                      }
+                                                    },
+                                                    "logicPath": [
+                                                      "maxRows"
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "BindingAttr",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "bindingAttrName"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rp91nBBHaMEiVh3oDu22wD",
+                                                "name": "Binding 4",
+                                                "type": "BindingAttr_2"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "label": {
+                                    "type": "i18n",
+                                    "key": "strAutoSize"
+                                  },
+                                  "layout": "vertical"
+                                },
+                                "logicPath": [
+                                  "props",
+                                  "autoSize"
+                                ]
+                              },
+                              {
+                                "id": "rM$B1Z$jyE4DvXion420wa",
+                                "name": "Switcher 6",
+                                "type": "AttrSwitcher_3",
+                                "props": {
+                                  "items": {
+                                    "type": "array",
+                                    "value": [
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "static",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "switcherStatic"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rnp0ffIQztL2zRflJnPAlg",
+                                                "name": "Enum",
+                                                "type": "EnumAttr_4",
+                                                "props": {
+                                                  "options": {
+                                                    "type": "array",
+                                                    "value": [
+                                                      {
+                                                        "type": "object",
+                                                        "value": {
+                                                          "label": {
+                                                            "type": "i18n",
+                                                            "key": "strTop"
+                                                          },
+                                                          "value": {
+                                                            "type": "box",
+                                                            "boxType": "switch",
+                                                            "case": "StringAttr",
+                                                            "oldExprs": {},
+                                                            "expr": "top"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "type": "object",
+                                                        "value": {
+                                                          "label": {
+                                                            "type": "i18n",
+                                                            "key": "strBottom"
+                                                          },
+                                                          "value": {
+                                                            "type": "box",
+                                                            "boxType": "switch",
+                                                            "case": "StringAttr",
+                                                            "oldExprs": {},
+                                                            "expr": "bottom"
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "BindingAttr",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "bindingAttrName"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "r4RBDkEsKMdx7Vmv665YlT",
+                                                "name": "Binding 7",
+                                                "type": "BindingAttr_2"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "label": {
+                                    "type": "i18n",
+                                    "key": "strPlacement"
+                                  },
+                                  "layout": "vertical"
+                                },
+                                "logicPath": [
+                                  "props",
+                                  "placement"
+                                ]
+                              },
+                              {
+                                "id": "rK4J3tFvKa$FBmJSPfZYQ2",
+                                "name": "Switcher 9",
+                                "type": "AttrSwitcher_3",
+                                "props": {
+                                  "items": {
+                                    "type": "array",
+                                    "value": [
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "static",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "switcherStatic"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rpZ8K9Vs1T4R4rYYaYY1tv",
+                                                "name": "Enum 2",
+                                                "type": "EnumAttr_4",
+                                                "props": {
+                                                  "options": {
+                                                    "type": "array",
+                                                    "value": [
+                                                      {
+                                                        "type": "object",
+                                                        "value": {
+                                                          "label": {
+                                                            "type": "i18n",
+                                                            "key": "strOutlined"
+                                                          },
+                                                          "value": {
+                                                            "type": "box",
+                                                            "boxType": "switch",
+                                                            "case": "StringAttr",
+                                                            "oldExprs": {},
+                                                            "expr": "outlined"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "type": "object",
+                                                        "value": {
+                                                          "label": {
+                                                            "type": "i18n",
+                                                            "key": "strBorderless"
+                                                          },
+                                                          "value": {
+                                                            "type": "box",
+                                                            "boxType": "switch",
+                                                            "case": "StringAttr",
+                                                            "oldExprs": {},
+                                                            "expr": "borderless"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "type": "object",
+                                                        "value": {
+                                                          "label": {
+                                                            "type": "i18n",
+                                                            "key": "strFilled"
+                                                          },
+                                                          "value": {
+                                                            "type": "box",
+                                                            "boxType": "switch",
+                                                            "case": "StringAttr",
+                                                            "oldExprs": {},
+                                                            "expr": "filled"
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "BindingAttr",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "bindingAttrName"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rypbMynLIY_xpmya3eMWH$",
+                                                "name": "Binding 11",
+                                                "type": "BindingAttr_2"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "label": {
+                                    "type": "i18n",
+                                    "key": "strVariant"
+                                  }
+                                },
+                                "logicPath": [
+                                  "props",
+                                  "variant"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "id": "rFVCZdu_bOFoFUfbESBQWn",
+                            "name": "Group 4",
+                            "type": "AttrGroup_7",
+                            "props": {
+                              "label": {
+                                "type": "i18n",
+                                "key": "strState"
+                              }
+                            },
+                            "children": [
+                              {
+                                "id": "rs_VcP6VPxjq0fnA9s_RDb",
+                                "name": "Switcher 10",
+                                "type": "AttrSwitcher_3",
+                                "props": {
+                                  "items": {
+                                    "type": "array",
+                                    "value": [
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "static",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "switcherStatic"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rQVKB6o7YN9AvvgcqljCMZ",
+                                                "name": "String 4",
+                                                "type": "StringAttr_1"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "BindingAttr",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "bindingAttrName"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rxO5QngxP6H5C8Gg$S9f2b",
+                                                "name": "Binding 12",
+                                                "type": "BindingAttr_2"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "label": {
+                                    "type": "i18n",
+                                    "key": "strValue"
+                                  }
+                                },
+                                "logicPath": [
+                                  "props",
+                                  "value"
+                                ]
+                              },
+                              {
+                                "id": "rvABsnTz1vE1yGh_Dhop$V",
+                                "name": "Switcher 11",
+                                "type": "AttrSwitcher_3",
+                                "props": {
+                                  "items": {
+                                    "type": "array",
+                                    "value": [
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "static",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "switcherStatic"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rk95DZ3rauzXw4ed5ywP1h",
+                                                "name": "String 5",
+                                                "type": "StringAttr_1"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "BindingAttr",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "bindingAttrName"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rAQsaaHc4iehxNjBvhMbgv",
+                                                "name": "Binding 13",
+                                                "type": "BindingAttr_2"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "label": {
+                                    "type": "i18n",
+                                    "key": "strDefaultValue"
+                                  },
+                                  "layout": "vertical"
+                                },
+                                "logicPath": [
+                                  "props",
+                                  "defaultValue"
+                                ]
+                              },
+                              {
+                                "id": "r8vmw_EA5YCjCsf05nFEhI",
+                                "name": "Switcher 12",
+                                "type": "AttrSwitcher_3",
+                                "props": {
+                                  "items": {
+                                    "type": "array",
+                                    "value": [
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "static",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "switcherStatic"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rVfQLzcW_sXQFo7BRRuBgV",
+                                                "name": "Boolean 3",
+                                                "type": "BooleanAttr_5"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "BindingAttr",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "bindingAttrName"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rcE0BTiwLuWBcOwxGNSFZ8",
+                                                "name": "Binding 14",
+                                                "type": "BindingAttr_2"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "label": {
+                                    "type": "i18n",
+                                    "key": "strDisabled"
+                                  }
+                                },
+                                "logicPath": [
+                                  "props",
+                                  "disabled"
+                                ]
+                              },
+                              {
+                                "id": "r7$pMf8wyb5wBV7cJRDwgI",
+                                "name": "Switcher 13",
+                                "type": "AttrSwitcher_3",
+                                "props": {
+                                  "items": {
+                                    "type": "array",
+                                    "value": [
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "static",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "switcherStatic"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rckrUkBwNvJ9R2Kx$JcJ7d",
+                                                "name": "Enum 3",
+                                                "type": "EnumAttr_4",
+                                                "props": {
+                                                  "options": {
+                                                    "type": "array",
+                                                    "value": [
+                                                      {
+                                                        "type": "object",
+                                                        "value": {
+                                                          "label": {
+                                                            "type": "i18n",
+                                                            "key": "strError"
+                                                          },
+                                                          "value": {
+                                                            "type": "box",
+                                                            "boxType": "switch",
+                                                            "case": "StringAttr",
+                                                            "oldExprs": {},
+                                                            "expr": "error"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "type": "object",
+                                                        "value": {
+                                                          "label": {
+                                                            "type": "i18n",
+                                                            "key": "strWarning"
+                                                          },
+                                                          "value": {
+                                                            "type": "box",
+                                                            "boxType": "switch",
+                                                            "case": "StringAttr",
+                                                            "oldExprs": {},
+                                                            "expr": "warning"
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "type": "object",
+                                        "value": {
+                                          "key": "BindingAttr",
+                                          "label": {
+                                            "type": "i18n",
+                                            "key": "bindingAttrName"
+                                          },
+                                          "render": {
+                                            "type": "slot",
+                                            "value": [
+                                              {
+                                                "id": "rLy6p2v16HlDEXeqk_NbRw",
+                                                "name": "Binding 15",
+                                                "type": "BindingAttr_2"
+                                              }
+                                            ],
+                                            "dynamic": true
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "label": {
+                                    "type": "i18n",
+                                    "key": "strStatus"
+                                  }
+                                },
+                                "logicPath": [
+                                  "props",
+                                  "status"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "styles",
+                      "label": {
+                        "type": "i18n",
+                        "key": "strStyles"
+                      },
+                      "children": {
+                        "type": "slot",
+                        "value": []
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "value": {
+                      "key": "events",
+                      "label": {
+                        "type": "i18n",
+                        "key": "strEvents"
+                      },
+                      "children": {
+                        "type": "slot",
+                        "value": [
+                          {
+                            "id": "r12bNfhIwmS82GA7zM$ARg",
+                            "name": "Binding 16",
+                            "type": "BindingAttr_2",
+                            "props": {
+                              "label": {
+                                "type": "i18n",
+                                "key": "strOnChange"
+                              }
+                            },
+                            "logicPath": [
+                              "props",
+                              "onChange"
+                            ]
+                          },
+                          {
+                            "id": "r80IusilXtBG95P8Y$8OPc",
+                            "name": "Binding 18",
+                            "type": "BindingAttr_2",
+                            "props": {
+                              "label": {
+                                "type": "i18n",
+                                "key": "strOnClear"
+                              }
+                            },
+                            "logicPath": [
+                              "props",
+                              "onClear"
+                            ]
+                          },
+                          {
+                            "id": "rNPnRZXIvySFIv64Yqo5vS",
+                            "name": "Binding 20",
+                            "type": "BindingAttr_2",
+                            "props": {
+                              "label": {
+                                "type": "i18n",
+                                "key": "strOnFocus"
+                              }
+                            },
+                            "logicPath": [
+                              "props",
+                              "onFocus"
+                            ]
+                          },
+                          {
+                            "id": "rGFJ9desM6vU19NWekqQSM",
+                            "name": "Binding 10",
+                            "type": "BindingAttr_2",
+                            "props": {
+                              "label": {
+                                "type": "i18n",
+                                "key": "strOnResize"
+                              }
+                            },
+                            "logicPath": [
+                              "props",
+                              "onResize"
+                            ]
+                          },
+                          {
+                            "id": "reWYhB32XELK5WAYC0_iap",
+                            "name": "Binding 17",
+                            "type": "BindingAttr_2",
+                            "props": {
+                              "label": {
+                                "type": "i18n",
+                                "key": "strOnSearch"
+                              }
+                            },
+                            "logicPath": [
+                              "props",
+                              "onSearch"
+                            ]
+                          },
+                          {
+                            "id": "rfZ39srvXhOH3PK$fQacCa",
+                            "name": "Binding 19",
+                            "type": "BindingAttr_2",
+                            "props": {
+                              "label": {
+                                "type": "i18n",
+                                "key": "strOnSelect"
+                              }
+                            },
+                            "logicPath": [
+                              "props",
+                              "onSelect"
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "code": {
+        "importPath": [
+          "Mentions"
+        ],
+        "exportPath": [
+          "Mentions"
+        ]
+      },
+      "groupName": {
+        "key": "groupDataEntry"
+      },
+      "implements": {
+        "style": true,
+        "if": true,
+        "for": true
+      },
+      "slots": [
+        {
+          "logicPath": [
+            "props",
+            "prefix"
+          ],
+          "name": {
+            "key": "strPrefix"
+          }
+        },
+        {
+          "logicPath": [
+            "props",
+            "notFoundContent"
+          ],
+          "name": {
+            "key": "strNotFoundContent"
+          }
+        }
+      ]
+    },
+    {
       "type": "Table",
       "name": {
         "key": "tableName"
@@ -46052,6 +47407,7 @@
       "layoutHeaderName": "Layout header",
       "layoutName": "Layout",
       "layoutSiderName": "Layout sider",
+      "mentionsName": "Mentions",
       "menuName": "Menu",
       "numberAttrName": "Number",
       "otpName": "OTP",
@@ -46233,6 +47589,7 @@
       "strMaxTagCount": "Max tag count",
       "strMaxTagPlaceholder": "Max tag placeholder",
       "strMaxTagTextLength": "Max tag text length",
+      "strMentionsSplit": "Split",
       "strMenu": "Menu",
       "strMessageVariables": "Message variabled",
       "strMiddle": "Middle",
@@ -46468,6 +47825,7 @@
       "layoutHeaderName": "布局顶部",
       "layoutName": "布局",
       "layoutSiderName": "布局侧边栏",
+      "mentionsName": "提及",
       "menuName": "菜单",
       "numberAttrName": "数字",
       "otpName": "一次性密码框",
@@ -46649,6 +48007,7 @@
       "strMaxTagCount": "最大标签数",
       "strMaxTagPlaceholder": "最大标签占位",
       "strMaxTagTextLength": "最大标签文本长度",
+      "strMentionsSplit": "分隔符",
       "strMenu": "菜单",
       "strMessageVariables": "消息变量",
       "strMiddle": "中",

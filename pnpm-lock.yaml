@@ -1694,6 +1694,9 @@ importers:
       '@p-lc/pd':
         specifier: workspace:^
         version: link:../../protocol/pd
+      '@p-lc/react-shared':
+        specifier: workspace:^
+        version: link:../../common/react-shared
       '@p-lc/shared':
         specifier: workspace:^
         version: link:../../common/shared

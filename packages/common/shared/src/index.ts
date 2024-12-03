@@ -1,5 +1,4 @@
 export * from '@mobo-ts/shared'
-export { default as isPromise } from 'is-promise'
 
 export * from './array'
 export * from './class'

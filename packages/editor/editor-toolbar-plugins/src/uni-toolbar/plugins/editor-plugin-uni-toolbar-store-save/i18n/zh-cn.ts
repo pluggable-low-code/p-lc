@@ -1,4 +1,8 @@
-import { I18N_KEY_UNI_TOOLBAR_SAVE } from './keys'
+import {
+  I18N_KEY_UNI_TOOLBAR_SAVE,
+  I18N_KEY_UNI_TOOLBAR_SAVE_FAILED,
+  I18N_KEY_UNI_TOOLBAR_SAVE_SUCCESS,
+} from './keys'
 import type { EditorPluginUniToolbarStoreSaveI18nLanguageResource } from './types'
 
 /**
@@ -7,4 +11,6 @@ import type { EditorPluginUniToolbarStoreSaveI18nLanguageResource } from './type
 export const editorPluginUniToolbarStoreSaveI18nZhCn: EditorPluginUniToolbarStoreSaveI18nLanguageResource =
   {
     [I18N_KEY_UNI_TOOLBAR_SAVE]: '保存',
+    [I18N_KEY_UNI_TOOLBAR_SAVE_SUCCESS]: '保存成功',
+    [I18N_KEY_UNI_TOOLBAR_SAVE_FAILED]: '保存失败',
   }

@@ -1,6 +1,6 @@
 import type { Promisable } from '@p-lc/shared'
-import { definePropertyByGetter, promisableThen } from '@p-lc/shared'
-import { action, computed, makeObservable, observable } from 'mobx'
+import { definePropertyByGetter } from '@p-lc/shared'
+import { computed, makeObservable, observable, runInAction } from 'mobx'
 import type {
   AnyEditorPlugin,
   Editor,
@@ -61,7 +61,7 @@ export interface EditorPluginSaveStorePropertiesExtHkt<
       /**
        * 保存
        */
-      save(): void
+      save(): Promisable<void>
       /**
        * 保存事件
        * @param uidl UIDL
@@ -112,19 +112,22 @@ export const editorPluginSaveStore: EditorRawPlugin<
       return uidlStore.uidl !== saveStore.savedUidl
     }
     saveStore.isSaving = false
-    saveStore.save = action(() => {
+    saveStore.save = async (): Promise<void> => {
       const { uidl } = uidlStore
       if (!uidl || !saveStore.isSavable) return
-      saveStore.savedUidl = uidl
-      saveStore.isSaving = true
-      promisableThen(
-        saveStore.onSave?.(uidl, ctx),
-        action(() => {
+      runInAction(() => {
+        saveStore.savedUidl = uidl
+        saveStore.isSaving = true
+      })
+      try {
+        await saveStore.onSave?.(uidl, ctx)
+        emitter.emit(EDITOR_EVENT_KEY_SAVE, { uidl })
+      } finally {
+        runInAction(() => {
           saveStore.isSaving = false
-        }),
-      )
-      emitter.emit(EDITOR_EVENT_KEY_SAVE, { uidl })
-    })
+        })
+      }
+    }
     makeObservable(saveStore, {
       savedUidl: observable.ref,
       isSavable: computed,

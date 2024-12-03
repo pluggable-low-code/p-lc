@@ -1,14 +1,37 @@
-import isPromise from 'is-promise'
+import isPromiseLike from 'is-promise'
 import type { Promisable } from 'type-fest'
+
+export { isPromiseLike }
+
+/**
+ * 值是 Promise
+ * @param v 值
+ */
+export function isPromise<T, S>(v: PromiseLike<T> | S): v is Promise<T> {
+  return v instanceof Promise
+}
 
 /**
  * 对可能为 Promise 的值进行下一步计算
  * @param p 可能为 Promise 的值
- * @param fn 计算函数
+ * @param thenFn 下一步函数
+ * @
  */
-export function promisableThen<T, R>(
+export function promisableThen<T, R1, R2 = void>(
   p: Promisable<T>,
-  fn: (ret: T) => R,
-): Promisable<R> {
-  return isPromise(p) ? p.then(fn) : fn(p)
+  thenFn: (ret: T) => R1,
+  catchFn?: (err: unknown) => R2,
+): Promisable<R1 | R2> {
+  if (isPromiseLike(p)) {
+    return (async (): Promise<R1 | R2> => {
+      let ret
+      try {
+        ret = await p
+      } catch (err) {
+        return catchFn?.(err) as Promise<R2>
+      }
+      return thenFn(ret)
+    })()
+  }
+  return thenFn(p)
 }

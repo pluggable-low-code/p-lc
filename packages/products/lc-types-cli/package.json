@@ -36,6 +36,7 @@
     "@p-lc/lc-types-suite": "workspace:^",
     "@p-lc/lc-types-ui": "workspace:^",
     "@p-lc/pd": "workspace:^",
+    "@p-lc/react-shared": "workspace:^",
     "@p-lc/shared": "workspace:^",
     "@vitejs/plugin-react": "^4.3.1",
     "vite": "^5.4.0",

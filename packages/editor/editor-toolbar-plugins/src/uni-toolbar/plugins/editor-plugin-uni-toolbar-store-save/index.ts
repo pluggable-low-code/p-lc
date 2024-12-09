@@ -1,5 +1,11 @@
-import type { DepPluginUniteEditorPlugin, EditorPlugin } from '@p-lc/editor'
+import {
+  EDITOR_EVENT_KEY_SAVE_FAILED,
+  EDITOR_EVENT_KEY_SAVE_SUCCESSFUL,
+  type DepPluginUniteEditorPlugin,
+  type EditorPlugin,
+} from '@p-lc/editor'
 import { EN_US, ZH_CN } from '@p-lc/shared'
+import { message } from 'antd'
 import {
   createBatchMatchSimpleShortcut,
   editableShortcutFilter,
@@ -13,6 +19,8 @@ import {
   editorPluginUniToolbarStoreSaveI18n,
   editorPluginUniToolbarStoreSaveI18nEnUs,
   editorPluginUniToolbarStoreSaveI18nZhCn,
+  I18N_KEY_UNI_TOOLBAR_SAVE_FAILED,
+  I18N_KEY_UNI_TOOLBAR_SAVE_SUCCESSFUL,
 } from './i18n'
 
 export * from './action-toolbar-save-btn'
@@ -82,7 +90,7 @@ export const editorPluginUniToolbarStoreSave: EditorPlugin<
 > = {
   id: 'uni-toolbar-store-save',
   initEditor(ctx) {
-    const { uniToolbarStore, i18nStore } = ctx
+    const { uniToolbarStore, i18nStore, emitter } = ctx
     //#region i18n 摇树
     // 打包器预处理，只能处理 if-else，不能处理 switch-case
     if (!process.env.LC_LANGUAGE) {
@@ -98,5 +106,15 @@ export const editorPluginUniToolbarStoreSave: EditorPlugin<
     }
     //#endregion
     uniToolbarStore.addItem(uniToolbarItemSave)
+    emitter.on(EDITOR_EVENT_KEY_SAVE_SUCCESSFUL, () => {
+      message.success(i18nStore.t(I18N_KEY_UNI_TOOLBAR_SAVE_SUCCESSFUL))
+    })
+    emitter.on(EDITOR_EVENT_KEY_SAVE_FAILED, ({ err }) => {
+      let msg = i18nStore.t(I18N_KEY_UNI_TOOLBAR_SAVE_FAILED)
+      if (err instanceof Error) {
+        msg = `${msg}: ${err.message}`
+      }
+      message.error(msg)
+    })
   },
 }

@@ -1,5 +1,10 @@
 import type { DepPluginUniteEditorPlugin, EditorPlugin } from '@p-lc/editor'
-import { EN_US, IS_APPLE_DEVICE, ZH_CN } from '@p-lc/shared'
+import {
+  EN_US,
+  IS_APPLE_DEVICE,
+  stopPropagationAndPreventDefault,
+  ZH_CN,
+} from '@p-lc/shared'
 import {
   createBatchMatchSimpleShortcut,
   SIMPLE_SHORTCUT_FLAG_CTRL,
@@ -53,7 +58,7 @@ export const uniToolbarItemUndo: UniToolbarItem<
   shortcut: {
     match: createBatchMatchSimpleShortcut([SIMPLE_SHORTCUT_FLAG_MOD, 'z']),
     action(ev, ctx): void {
-      void ev
+      stopPropagationAndPreventDefault(ev)
       const { uidlStore } = ctx
       uidlStore.undo()
     },
@@ -78,7 +83,7 @@ export const uniToolbarItemRedo: UniToolbarItem<
         : [SIMPLE_SHORTCUT_FLAG_CTRL, 'y'],
     ),
     action(ev, ctx): void {
-      void ev
+      stopPropagationAndPreventDefault(ev)
       const { uidlStore } = ctx
       uidlStore.redo()
     },

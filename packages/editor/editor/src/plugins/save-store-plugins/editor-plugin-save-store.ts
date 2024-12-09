@@ -37,6 +37,28 @@ export interface EditorPluginSaveStorePropertiesExtHkt<
          */
         uidl: UidlStoreUidl<Plugin>
       }
+      /**
+       * 保存成功事件
+       */
+      saveSuccessful: {
+        /**
+         * UIDL
+         */
+        uidl: UidlStoreUidl<Plugin>
+      }
+      /**
+       * 保存失败事件
+       */
+      saveFailed: {
+        /**
+         * 错误
+         */
+        err: unknown
+        /**
+         * UIDL
+         */
+        uidl: UidlStoreUidl<Plugin>
+      }
     }
     /**
      * 保存仓库
@@ -81,6 +103,16 @@ export interface EditorPluginSaveStorePropertiesExtHkt<
 export const EDITOR_EVENT_KEY_SAVE = 'save'
 
 /**
+ * 编辑器事件键值：保存成功
+ */
+export const EDITOR_EVENT_KEY_SAVE_SUCCESSFUL = 'saveSuccessful'
+
+/**
+ * 编辑器事件键值：保存失败
+ */
+export const EDITOR_EVENT_KEY_SAVE_FAILED = 'saveFailed'
+
+/**
  * EditorPluginSaveStorePropertiesExtHkt 辅助类型
  */
 export interface $EditorPluginSaveStorePropertiesExtHkt
@@ -120,8 +152,11 @@ export const editorPluginSaveStore: EditorRawPlugin<
         saveStore.isSaving = true
       })
       try {
-        await saveStore.onSave?.(uidl, ctx)
         emitter.emit(EDITOR_EVENT_KEY_SAVE, { uidl })
+        await saveStore.onSave?.(uidl, ctx)
+        emitter.emit(EDITOR_EVENT_KEY_SAVE_SUCCESSFUL, { uidl })
+      } catch (err) {
+        emitter.emit(EDITOR_EVENT_KEY_SAVE_FAILED, { err, uidl })
       } finally {
         runInAction(() => {
           saveStore.isSaving = false

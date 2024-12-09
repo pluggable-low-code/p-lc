@@ -1,7 +1,7 @@
 import type {
   I18N_KEY_UNI_TOOLBAR_SAVE,
   I18N_KEY_UNI_TOOLBAR_SAVE_FAILED,
-  I18N_KEY_UNI_TOOLBAR_SAVE_SUCCESS,
+  I18N_KEY_UNI_TOOLBAR_SAVE_SUCCESSFUL,
 } from './keys'
 
 /**
@@ -9,7 +9,7 @@ import type {
  */
 export type EditorPluginUniToolbarStoreSaveI18nKey =
   | typeof I18N_KEY_UNI_TOOLBAR_SAVE
-  | typeof I18N_KEY_UNI_TOOLBAR_SAVE_SUCCESS
+  | typeof I18N_KEY_UNI_TOOLBAR_SAVE_SUCCESSFUL
   | typeof I18N_KEY_UNI_TOOLBAR_SAVE_FAILED
 
 /**
